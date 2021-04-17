@@ -1,0 +1,12 @@
+<svg id="Hero_attention" data-name="Hero attention" xmlns="http://www.w3.org/2000/svg" width="1610" height="1080" viewBox="0 0 1610 1080">
+  <path id="BG_hero" data-name="BG hero" d="M0,0H1233a0,0,0,0,1,0,0V1077a3,3,0,0,1-3,3H0a0,0,0,0,1,0,0V0A0,0,0,0,1,0,0Z" fill="#4c987b"/>
+  <rect id="BG_hero-2" data-name="BG hero" width="706" height="639" transform="translate(577 210)" fill="#4c987b"/>
+  <rect id="BG_hero-3" data-name="BG hero" width="497" height="100" rx="50" transform="translate(1113 371)" fill="#4c987b"/>
+  <rect id="BG_hero-4" data-name="BG hero" width="475" height="100" rx="50" transform="translate(1035 571)" fill="#4c987b"/>
+  <path id="BG_hero-5" data-name="BG hero" d="M40.5,0H209c22.37,0,40.5,22.386,40.5,50s-18.134,50-40.5,50H97.332c-22.607.549-21.953,12.751-21.953,27.751S0,77.614,0,50,18.134,0,40.5,0Z" transform="translate(1157.493 771)" fill="#4c987b"/>
+  <path id="BG_hero-6" data-name="BG hero" d="M56.516-20.176C56.516-4.638,61.214,0,79.6,0H289.946c24.116,0,43.667,22.386,43.667,50s-19.55,50-43.667,50H43.667C19.55,100,0,77.614,0,50S56.516-35.714,56.516-20.176Z" transform="translate(1176.388 171)" fill="#4c987b"/>
+  <rect id="BG_hero-7" data-name="BG hero" width="100" height="100" rx="50" transform="translate(1233 271)" fill="#fff"/>
+  <rect id="BG_hero-8" data-name="BG hero" width="100" height="100" rx="50" transform="translate(1233 671)" fill="#fff"/>
+  <rect id="BG_hero-9" data-name="BG hero" width="100" height="100" rx="50" transform="translate(1233 471)" fill="#fff"/>
+  <rect id="BG_hero-10" data-name="BG hero" width="475" height="100" rx="50" transform="translate(939 771)" fill="#4c987b"/>
+</svg>

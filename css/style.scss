@@ -1,0 +1,128 @@
+// Variables
+$green: #4C987B;
+$max-width:1500px;
+$font: 'Poppins', sans-serif;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding:0;
+    font-family: $font;
+}
+
+body {
+    height:100vh;
+    padding:0;
+    margin:0;
+}
+
+
+header {
+    position: fixed;
+    width:100%;
+
+    .inner-header {
+        display:flex;
+        max-width: $max-width;
+        width:100%;
+        margin:0 auto;
+        align-items: center;
+        padding:1em;
+
+        span {
+            font-weight: 700;
+            font-size: calc(2rem - 4px);
+            color:white;
+            flex:2;
+        }
+
+        nav {
+            flex:1;
+            color:$green;
+
+            ul {
+                list-style-type: none;
+                li {
+                    display: inline;
+                    padding: 0 3em;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+.hero-wrapper {
+    width:100%;
+    display:flex;
+}
+
+
+.hero-outer-right {
+    background-color: white;
+    flex:1;
+}
+.hero-outer-left {
+    background-color: $green;
+    flex:1;
+}
+
+.hero {
+    height:100vh;
+    display:flex;
+    flex:5;
+    max-width: $max-width;
+    flex-wrap: nowrap;
+    margin: 0 auto;
+    flex-basis: 1920px;
+
+}
+
+.hero-inner-left {
+    background: $green;
+    height:100%;
+    flex: 2;
+    display:flex;
+    align-items: center;
+
+    .hero-content {
+        height:400px;
+        width:800px;
+        color:white;
+
+        h1 {
+            font-size: 4.5em;
+        }
+
+        h2 {
+            font-size: calc(2em - 3px);
+            max-width:530px;
+        }
+
+        .buttons {
+            display:flex;
+            max-width:400px;
+            
+        }
+    }
+}
+
+.hero-inner-right {
+    height:100%;
+    flex:1;
+    background: white url(assets/hero-bg-right.svg) no-repeat;
+    background-size: 100% ;
+}
+
+
+
+// background: url('assets/hero-bg.svg');
+// background-repeat: no-repeat;
+// background-position: top center;
+// background-size: cover;
+// display:flex;

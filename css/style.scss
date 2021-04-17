@@ -2,13 +2,14 @@
 $green: #4C987B;
 $max-width:1500px;
 $font: 'Poppins', sans-serif;
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+$hero-proportions: auto minmax(300px, 400px);
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
 
 * {
     box-sizing: border-box;
     padding:0;
     font-family: $font;
+    margin:0;
 }
 
 body {
@@ -21,14 +22,16 @@ body {
 header {
     position: fixed;
     width:100%;
+    padding: 0 3em;
 
     .inner-header {
-        display:flex;
+        display:grid;
+        grid-template-columns: $hero-proportions;
         max-width: $max-width;
         width:100%;
         margin:0 auto;
         align-items: center;
-        padding:1em;
+        padding:1em 0;
 
         span {
             font-weight: 700;
@@ -38,14 +41,15 @@ header {
         }
 
         nav {
-            flex:1;
             color:$green;
 
             ul {
+                display:flex;
+                justify-content: space-evenly;
                 list-style-type: none;
+
                 li {
                     display: inline;
-                    padding: 0 3em;
                 }
             }
         }
@@ -54,75 +58,118 @@ header {
 
 
 
-
-
-
 .hero-wrapper {
     width:100%;
-    display:flex;
+    background: url('assets/hero-wrapper-bg.svg');
+    background-size: cover;
+    background-position: center;
+    padding: 0 3em;
+    
+    .hero {
+        height:100vh;
+        display:grid;
+        grid-template-columns: $hero-proportions;
+        max-width: $max-width;
+        margin: 0 auto;
+
+    
+    }
 }
 
-
-.hero-outer-right {
-    background-color: white;
-    flex:1;
-}
-.hero-outer-left {
-    background-color: $green;
-    flex:1;
-}
-
-.hero {
-    height:100vh;
-    display:flex;
-    flex:5;
-    max-width: $max-width;
-    flex-wrap: nowrap;
-    margin: 0 auto;
-    flex-basis: 1920px;
-
-}
 
 .hero-inner-left {
     background: $green;
-    height:100%;
     flex: 2;
     display:flex;
     align-items: center;
+    min-width:400px;
+    flex-shrink: 3;
+
 
     .hero-content {
-        height:400px;
-        width:800px;
+        height:50%;
+        max-width: 800px;
+        width:100%;
         color:white;
 
         h1 {
             font-size: 4.5em;
+            margin-bottom:1rem;
+            line-height: 1.2em;
         }
 
         h2 {
             font-size: calc(2em - 3px);
             max-width:530px;
+            margin-bottom:5rem;
         }
 
         .buttons {
             display:flex;
-            max-width:400px;
+            justify-content: space-between;
+            max-width:420px;
+            $padding: 0.9em;
             
+            .cta {
+                background:white;
+                border:0;
+                color:$green;
+                box-shadow:0 5px 10px rgba(0,0,0,0.1);
+                
+                
+            }
+            button {
+                border-radius: 5px;
+                background:none;
+                padding:$padding;
+                color:white;
+                border:0;
+                font-weight: 400;
+                font-size: calc(1em + 2px);
+                display:flex;
+                align-items: center;
+
+                img {
+                    margin-right: $padding;
+                    height: calc(2em - 2px);
+                }
+            }
         }
     }
 }
 
 .hero-inner-right {
+
     height:100%;
     flex:1;
-    background: white url(assets/hero-bg-right.svg) no-repeat;
-    background-size: 100% ;
+    background:url(assets/hero-bg-right.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    flex-shrink: 0;
+    max-width:400px;
 }
 
+.wrapper {
+    max-width: $max-width;
+    margin:0 auto;
+}
 
+section {
+    width:100%;
+    height:auto;
+    display:flex;
+    padding: 4em 0;
 
-// background: url('assets/hero-bg.svg');
-// background-repeat: no-repeat;
-// background-position: top center;
-// background-size: cover;
-// display:flex;
+    .left {
+        display:flex;
+        width:50%;
+        flex:1;
+    }
+
+    img {
+        height:100%;
+        width:auto;
+        flex:1;
+    }
+}

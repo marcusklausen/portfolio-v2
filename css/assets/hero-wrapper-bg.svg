@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="5000" height="1080" viewBox="0 0 5000 1080">
+  <defs>
+    <clipPath id="clip-Hero-wrapper_BG">
+      <rect width="5000" height="1080"/>
+    </clipPath>
+  </defs>
+  <g id="Hero-wrapper_BG" data-name="Hero-wrapper BG" clip-path="url(#clip-Hero-wrapper_BG)">
+    <rect width="5000" height="1080" fill="#fff"/>
+    <rect id="Rectangle_37" data-name="Rectangle 37" width="2500" height="1080" fill="#4c987b"/>
+  </g>
+</svg>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="53" height="53" viewBox="0 0 53 53">
+  <g id="Icon_feather-arrow-down-circle" data-name="Icon feather-arrow-down-circle" transform="translate(-1.5 -1.5)">
+    <path id="Path_1" data-name="Path 1" d="M53,28A25,25,0,1,1,28,3,25,25,0,0,1,53,28Z" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+    <path id="Path_2" data-name="Path 2" d="M12,18,22,28,32,18" transform="translate(6 10)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+    <path id="Path_3" data-name="Path 3" d="M18,12V32" transform="translate(10 6)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+  </g>
+</svg>

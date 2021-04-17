@@ -12,8 +12,8 @@
 <body>
     <header>
         <div class="inner-header">
-            <span>Marcus Klausen</span>
-            <nav>
+            <span id="logo">Marcus Klausen</span>
+            <nav id="nav">
                 <ul>
                     <li>Forside</li>
                     <li>Portfolio</li>
@@ -25,18 +25,31 @@
 
     <div class="hero-wrapper">
 
-        <div class="hero-outer-left"></div>
         <div class="hero">
-            <div class="hero-inner-left">
+            <div class="hero-inner-left" id="hero-left">
                 <div class="hero-content">
                     <h1>Frontend elev fyldt med potentiale</h1>
                     <h2>Søger multimedie-integrator elevplads fra august 2021</h2>
+                    <div class="buttons">
+                        <button class="cta">
+                            <img src="css/assets/mail-icon.svg" alt="">Send mig en mail</button>
+                        <button><img src="css/assets/file-icon.svg" alt="">Hent CV</button>
+                    </div>
                 </div>
             </div>
-            <div class="hero-inner-right"></div>
+            <div class="hero-inner-right" id="hero-right"></div>
         </div>
-            <div class="hero-outer-right"></div>
     </div>
+
+    <div class="wrapper">
+        <section>
+            <div class="left"></div>
+            <img src="img/4-in-a-row.png" alt="" srcset="">
+        </section>
+        <section class="about">
+        </section>
+    </div>
+    <script src="script.js"></script>
 </body>
 
 </html>

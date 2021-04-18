@@ -78,7 +78,33 @@ header {
     display:grid;
     text-align: center;
     padding:4em;
+
+    .buttons {
+        display: flex;
+        justify-content: space-between;
+        max-width: 420px;
+      }
+      
+      .cta {
+        background: white;
+        border: 0;
+        color: #4C987B;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+      }
+      button {
+        border-radius: 5px;
+        background: none;
+        padding: 0.9em;
+        color: white;
+        border: 0;
+        font-weight: 400;
+        font-size: calc(1em + 2px);
+        display: flex;
+        align-items: center;
+      }
 }
+
+
 
 .hero h2 {
     display:none;

@@ -1,12 +1,9 @@
 // Variables
 $green: #4C987B;
-$max-width:1440px;
 $font: 'Poppins', sans-serif;
-$hero-proportions: auto minmax(300px, 400px);
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
 
 * {
-    box-sizing: border-box;
     padding:0;
     margin:0;
 }
@@ -19,9 +16,9 @@ html {
 }
 
 body {
-    height:100vh;
     padding:0;
     margin:0;
+    position: relative;
 }
 
 ul {
@@ -34,7 +31,6 @@ a {
 
 img {
     width:100%;
-    display:none;
 }
 
 .hero-graphic {
@@ -43,11 +39,15 @@ img {
 
 
 header {
-    background-color:$green;
+    background-color:darken($green, 5%);
     color:white;
     display:flex;
     justify-content: space-between;
+    align-items: center;
     padding:1em;
+    position:sticky;
+    position: -webkit-sticky;
+    top:0;
 
     a {
         color:white;
@@ -77,12 +77,27 @@ header {
     color:white;
     display:grid;
     text-align: center;
-    padding:4em;
+    padding:4em 2em;
+    background-image: url('assets/mobile-about-bg.svg');
+    background-size: cover;
+    background-position:bottom;
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    h2 {
+        display:none;
+    }
 
     .buttons {
         display: flex;
         justify-content: space-between;
+        flex-direction: column;
         max-width: 420px;
+        flex-wrap: wrap;
+        margin: 2em auto;
+        text-align: center;
       }
       
       .cta {
@@ -90,22 +105,90 @@ header {
         border: 0;
         color: #4C987B;
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        margin-bottom:1em;
       }
+
       button {
         border-radius: 5px;
         background: none;
-        padding: 0.9em;
+        padding: 0.7em;
         color: white;
         border: 0;
-        font-weight: 400;
-        font-size: calc(1em + 2px);
+        font-weight: bold;
+        font-size: 0.9em;
         display: flex;
         align-items: center;
+        margin:0 auto;
+
+        img {
+            margin-right: 0.7em;
+            height: calc(1.5em - 2px);
+            width: auto;
+          }
       }
+      
+}
+
+section {
+    padding:4em 2em;
+    text-align: center;
+
+    span {
+        text-transform: uppercase;
+        font-size: 0.8em;
+        color:$green;
+        font-weight: bold;
+        letter-spacing: 0.2em;
+    }
+
+    h3 {
+        font-size: 2em;
+        color: black;
+    }
+
+    img {
+        border-radius: 0.5em;
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .left {
+        padding: 0 0 2em 0 ;
+    }
+
+    p {
+        padding:0.5em 0;
+    }
+
+}
+
+.featured p {
+    padding:0.5em 0 0 0;
+}
+
+.about {
+    background-color: $green;
+    color:white;
+    background-image: url('assets/mobile-about-bg.svg');
+    background-position: top;
+    background-size: cover;
+    background-repeat:no-repeat;
+    margin-bottom:3em;
+
+    h3 {
+        color:white;
+    }
+
+    .more-text {
+        display:none;
+    }
+
+    a {
+        color:white;
+        font-weight: bold;
+        text-decoration: underline;
+    }
 }
 
 
 
-.hero h2 {
-    display:none;
-}
+

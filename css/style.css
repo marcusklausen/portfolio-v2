@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
 * {
-  box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
@@ -11,9 +10,9 @@ html {
 }
 
 body {
-  height: 100vh;
   padding: 0;
   margin: 0;
+  position: relative;
 }
 
 ul {
@@ -26,7 +25,6 @@ a {
 
 img {
   width: 100%;
-  display: none;
 }
 
 .hero-graphic {
@@ -34,11 +32,15 @@ img {
 }
 
 header {
-  background-color: #4C987B;
+  background-color: #44876d;
   color: white;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 1em;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
 }
 header a {
   color: white;
@@ -60,33 +62,100 @@ header ul a {
   color: white;
   display: grid;
   text-align: center;
-  padding: 4em;
+  padding: 4em 2em;
+  background-image: url("assets/mobile-about-bg.svg");
+  background-size: cover;
+  background-position: bottom;
+}
+.hero h1 {
+  font-size: 2.5em;
+}
+.hero h2 {
+  display: none;
 }
 .hero .buttons {
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
   max-width: 420px;
+  flex-wrap: wrap;
+  margin: 2em auto;
+  text-align: center;
 }
 .hero .cta {
   background: white;
   border: 0;
   color: #4C987B;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1em;
 }
 .hero button {
   border-radius: 5px;
   background: none;
-  padding: 0.9em;
+  padding: 0.7em;
   color: white;
   border: 0;
-  font-weight: 400;
-  font-size: calc(1em + 2px);
+  font-weight: bold;
+  font-size: 0.9em;
   display: flex;
   align-items: center;
+  margin: 0 auto;
+}
+.hero button img {
+  margin-right: 0.7em;
+  height: calc(1.5em - 2px);
+  width: auto;
 }
 
-.hero h2 {
+section {
+  padding: 4em 2em;
+  text-align: center;
+}
+section span {
+  text-transform: uppercase;
+  font-size: 0.8em;
+  color: #4C987B;
+  font-weight: bold;
+  letter-spacing: 0.2em;
+}
+section h3 {
+  font-size: 2em;
+  color: black;
+}
+section img {
+  border-radius: 0.5em;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+}
+section .left {
+  padding: 0 0 2em 0;
+}
+section p {
+  padding: 0.5em 0;
+}
+
+.featured p {
+  padding: 0.5em 0 0 0;
+}
+
+.about {
+  background-color: #4C987B;
+  color: white;
+  background-image: url("assets/mobile-about-bg.svg");
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 3em;
+}
+.about h3 {
+  color: white;
+}
+.about .more-text {
   display: none;
+}
+.about a {
+  color: white;
+  font-weight: bold;
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=style.css.map */

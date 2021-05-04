@@ -45,7 +45,7 @@ img, video {
     margin: 0 auto;
 }
 
-header .wrapper div:first-child {
+header div:first-child {
     display:flex;
     justify-content: space-between;
     align-items: center;
@@ -55,6 +55,7 @@ header .left {
     background-color:darken($green, 10%);
     color:white;
     padding: 1em 2em;
+    width:100%;
 
 }
 header {
@@ -96,7 +97,7 @@ header {
 
 .hero {
     color:white;
-    
+    overflow:hidden;
 
     h1 {
         font-size: 2.5em;
@@ -157,6 +158,7 @@ header {
 }
 
 section {
+    margin: 0 auto;
     padding:4em 2em 4em 2em;
     text-align: center;
 
@@ -251,8 +253,14 @@ section {
     }
     .featured, .portfolio {
         display:grid;
-        grid-template-columns: 3fr 5fr;
+        grid-template-columns: 1fr 1fr;
     }
+
+    .hero-right {
+        display:grid;
+        grid-template-columns: 0 1fr;
+    }
+
 
 
     .featured img {
@@ -261,6 +269,14 @@ section {
         max-width: 800px;
     }
 
+    section img {
+        float:right;
+    }
+
+    
+    header .left {
+        padding: 1em 1em 1em 4em;
+    }
 
     .portfolio-left, .portfolio .inner.center {
         text-align: center;
@@ -269,29 +285,82 @@ section {
         color:white;
         
     
+       
         h1 {
+
+            margin-bottom: 1rem;
             font-size: 3em;
+            line-height: 1.2em;
 
             max-width: 700px;
         }
+
+
     
         h2 {
-            font-size: 1.5em;
+            font-size: 1.2em;
             display:block;
-            max-width:400px;
+            max-width:300px;
+            margin-bottom: 3rem;
         }
 
         .content {
-            text-align: left;
+            background: url('assets/hero-bg.svg') #3F8168 ;
+            background-size: cover;
+            border-radius: 0 0 5px 5px;
+            height:90vh;
+            animation: heroAnimation 1s ease;
+            padding:0 4em;
+            display:flex;
+            justify-content: center;
             align-items: flex-start;
-            padding-right:7em;
+            text-align: left;
+            overflow:visible;
+
+            .scroll-down {
+                width:30px;
+                height:auto;
+                animation-name: scrollDown;
+                animation-timing-function: ease;
+                transform-origin: bottom;
+                animation-duration: 2s;
+                animation-iteration-count: infinite;
+            }
+
+            .arrow-down-outer {
+                margin: 3em 0 0 5px;
+                height: auto;
+                overflow:visible;
+            }
+
+           
         }
 
-        .content > * {
+        .hero-graphic {
+            display: block;
+            margin-left:-2px;
+            width:auto;
+            height:70vh;
+            margin-top: 0px;
+            animation: moveUp 1.2s ease forwards;
+        }
+
+
+        
+        .content-inner {
+
+
+            text-align: left;
+            align-items: flex-start;
+            width:50%;
+        }
+
+
+        .content .content-inner > * {
             padding:0 0 1rem 0;
         }
 
-        .content > h2 {
+        .content .content-inner > h2 {
 
             padding:0 0 3rem 0;
         }
@@ -319,29 +388,44 @@ section {
     }
 
     section {
+        
+        padding: 4em 4em;
+
+        .portfolio {
+            grid-template-columns: 50% auto;
+        }
 
         .portfolio-container {
             display:grid;
-            place-content: center;
+            place-content: center start;
             padding: 0 3em 0 0 ;
         }
+
+        h3 {
+            font-size: 1.7em;
+        }
+
 
         
 
 
-        .about {
+    }
 
-            .grid {
-            display:grid;
-            grid-template-columns: 1fr 1fr;
-            gap:2em;
-            }
 
-            h3 {
-                font-size: 2.5em;
-            }
+    .about {
 
+        margin: 5em 0;
+
+        .grid {
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        gap:2em;
         }
+
+        h3 {
+            font-size: 2.5em;
+        }
+
     }
 
 }
@@ -355,6 +439,9 @@ section {
         .more-text {
             display:block;
         }
+
+        margin: 0 4em;
+        border-radius: 5px;
 
 
         a {display:none;}
@@ -371,27 +458,120 @@ section {
 
     }
 
+    .featured img {
+        margin-left:-20px;
+    }
+
+    
+
+    header .left {
+
+       width:66%;
+       transition: 0.3s;
+    
+    }
+
     .hero {
         .content {
             background: url('assets/hero-bg.svg') #3F8168 ;
             background-size: cover;
             border-radius: 0 0 5px 5px;
+            width:66%;
+            animation: heroAnimation 1s ease ;
+            display:flex;
+            justify-content: center;
+            align-items: flex-start;
+            text-align: left;
         }
+
     }
 
     .hero-graphic {
         display: block;
-        margin-left:-1px;
-        overflow:hidden;
+        margin-left:-2px;
         width:auto;
-        height:400px;
-        
+        height:50vh;
+        margin-top: 0px;
+        animation: moveUp 1.2s ease forwards;
     }
 
-    .hero-grid {
-        display:grid;
-        grid-template-columns: 66% auto;
+    .triangle-1 {
+        opacity: 0;
+        animation: opacity 0.5s ease forwards;
+        animation-delay: 0.2s;
+    }
+    .triangle-2 {
+        opacity: 0;
+        animation: opacity 0.5s ease forwards;
+        animation-delay: 0.4s;
+    }
+    .triangle-3 {
+        opacity: 0;
+        animation: opacity 0.5s ease forwards;
+        animation-delay: 0.6s;
+        margin-right:-400px;
+    }
+    .triangle-4 {
+        opacity: 0;
+        animation: opacity 0.5s ease forwards;
+        animation-delay: 0.8s;
+    }
+    .triangle-5 {
+        opacity: 0;
+        animation: opacity 0.5s ease forwards;
+        animation-delay: 1s;
+        display:block;
+    }
+    .triangle-6 {
+        opacity: 0;
+        animation: opacity 0.5s ease forwards;
+        animation-delay:  1.2s;
+    }
 
+    .transition-1 {
+        animation: moveDown 1.5s ease ;
+    }
+
+    .transition-2 {
+        animation: moveDown 1.2s ease ;
+    }
+
+    .transition-3 {
+        animation: moveDown 0.9s ease ;
+    }
+
+    @keyframes opacity {
+        0% { 
+        }
+        100% { 
+            opacity: 1;
+        }
+    }
+
+   
+
+    @keyframes moveDown {
+        0% { 
+            transform: translate(0px, -400px);
+        }
+        100% { 
+            transform: translate(0px, 0px);
+        }
+    }
+    @keyframes moveUp {
+        0% { 
+            transform: translate(0px,400px);
+        }
+        100% { 
+            transform: translate(0px, 0px);
+        }
+    }
+
+
+
+
+    .hero-grid {
+        display:flex;
     }
 
     section {
@@ -404,23 +584,119 @@ section {
 
 }
 
-  @keyframes full-width-menu {
-    from {
-
-        grid-template-columns: 66% auto;
-    }
-    to {
-      grid-template-columns: 100%;
-    }
-  }
 
 @media only screen and (min-width: 1400px) {
     .about {
         border-radius: 5px;
+        margin: 0 7em;
     }
 
-    section {
-
-     padding:4em 0em 4em 2em;
+    section.portfolio, section.featured {
+     padding:4em 7em 4em 7em;
     }
+
+    section img {
+    max-width: 600px;
+    }
+
+    header .left {
+        padding: 1em 7em;
+    }
+
+    .hero .content {
+        padding: 0 0 0 7em;
+
+        h1 {
+            font-size: 4em;
+        }
+
+        h2 {
+            font-size: 1.7em;
+            max-width: 500px;
+        }
+    }
+
+
+
+}
+
+
+@media only screen and (min-width: 1400px) {
+    .about {
+        border-radius: 5px;
+        margin: 0 12em;
+    }
+
+    section.portfolio, section.featured {
+     padding:4em 12em 4em 12em;
+    }
+
+
+    header .left {
+        padding: 1em 1em 1em 12em;
+    }
+
+    .hero .content {
+        padding: 0 0 0 12em;
+    }
+
+    section img {
+        float:right;
+    }
+
+        
+
+
+
+}
+
+
+@media only screen and (min-width: 1800px) {
+    .about {
+        border-radius: 5px;
+        margin: 0 25em;
+
+    }
+
+    section.portfolio, section.featured {
+        padding:4em 25em 4em 25em;
+    }
+
+
+    header .left {
+        padding: 1em 1em 1em 25em;
+    }
+
+    .hero .content {
+        padding: 0 0 0 25em;
+    }
+
+        
+
+
+
+}
+
+
+
+@keyframes heroAnimation {
+    0% { 
+
+        background-color: #00B8BF;
+        transform: translate(0px, -700px);
+
+        opacity: 0; 
+    }
+    100% { 
+        
+        background-color: #3F8168;
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+}
+@keyframes scrollDown {
+        0%   { transform: translateY(0); }
+        50%  { transform: translateY(0); }
+        70%  { transform: translateY(-20px); ; }
+        100% { transform: translateY(0); }
 }

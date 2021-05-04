@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240.67" height="733.968" viewBox="0 0 240.67 733.968">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="Group_22" data-name="Group 22" transform="translate(-47 97.115)">
+    <g id="Group_20" data-name="Group 20" transform="translate(271.375 503.255) rotate(180)">
+      <path id="Polygon_1" data-name="Polygon 1" class="cls-1" d="M57.228,0l57.228,98.428H0Z" transform="translate(119.697 -133.598) rotate(30)"/>
+      <path id="Polygon_1-2" data-name="Polygon 1" class="cls-1" d="M54.228,0l54.228,93.428H0Z" transform="translate(-16.295 513.745) rotate(-22)"/>
+      <path id="Polygon_2" data-name="Polygon 2" class="cls-1" d="M70.228,0l70.228,121.428H0Z" transform="translate(200.983 314.22) rotate(150)"/>
+      <path id="Polygon_4" data-name="Polygon 4" class="cls-1" d="M42.728,0,85.457,74.428H0Z" transform="matrix(-0.454, 0.891, -0.891, -0.454, 224.375, 104.227)"/>
+    </g>
+  </g>
+</svg>

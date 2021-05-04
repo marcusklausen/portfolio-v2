@@ -2,6 +2,7 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
 html {
@@ -23,7 +24,8 @@ a {
   text-decoration: none;
 }
 
-img {
+img, video {
+  max-width: 100%;
   width: 100%;
 }
 
@@ -31,13 +33,24 @@ img {
   display: none;
 }
 
-header {
-  background-color: #44876d;
-  color: white;
+.wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+header .wrapper div:first-child {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1em;
+}
+
+header .left {
+  background-color: #3b765f;
+  color: white;
+  padding: 1em 2em;
+}
+
+header {
   position: sticky;
   position: -webkit-sticky;
   top: 0;
@@ -57,21 +70,32 @@ header ul a {
   padding: 0 1em;
 }
 
+.header-br {
+  border-radius: 0 0 5px 5px;
+  overflow: hidden;
+}
+
+.hero-grid {
+  display: block;
+}
+
 .hero {
-  background: #4C987B;
   color: white;
-  display: grid;
-  text-align: center;
-  padding: 4em 2em;
-  background-image: url("assets/mobile-about-bg.svg");
-  background-size: cover;
-  background-position: bottom;
 }
 .hero h1 {
   font-size: 2.5em;
 }
 .hero h2 {
   display: none;
+}
+.hero .content {
+  background-image: url("assets/hero-bg-mobile.svg");
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 4em 2em;
+  background-size: cover;
+  background-position: bottom;
 }
 .hero .buttons {
   display: flex;
@@ -108,7 +132,7 @@ header ul a {
 }
 
 section {
-  padding: 4em 2em;
+  padding: 4em 2em 4em 2em;
   text-align: center;
 }
 section span {
@@ -117,6 +141,7 @@ section span {
   color: #4C987B;
   font-weight: bold;
   letter-spacing: 0.2em;
+  padding: 0.2em;
 }
 section h3 {
   font-size: 2em;
@@ -126,11 +151,12 @@ section img {
   border-radius: 0.5em;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
 }
-section .left {
+section .portfolio-container {
   padding: 0 0 2em 0;
 }
 section p {
   padding: 0.5em 0;
+  max-width: 600px;
 }
 
 .featured p {
@@ -138,13 +164,10 @@ section p {
 }
 
 .about {
-  background-color: #4C987B;
-  color: white;
-  background-image: url("assets/mobile-about-bg.svg");
-  background-position: top;
-  background-size: cover;
+  background: url("assets/hero-bg-mobile.svg");
   background-repeat: no-repeat;
-  margin-bottom: 3em;
+  background-size: cover;
+  color: white;
 }
 .about h3 {
   color: white;
@@ -156,6 +179,160 @@ section p {
   color: white;
   font-weight: bold;
   text-decoration: underline;
+}
+.about a {
+  display: none;
+}
+
+@media only screen and (min-width: 600px) {
+  .about {
+    text-align: left;
+  }
+  .about .more-text {
+    display: block;
+  }
+  .about .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+  }
+  .about h3 {
+    font-size: 2em;
+  }
+}
+@media only screen and (min-width: 800px) {
+  .featured, .portfolio-container, .about {
+    text-align: left;
+  }
+
+  .featured, .portfolio {
+    display: grid;
+    grid-template-columns: 3fr 5fr;
+  }
+
+  .featured img {
+    margin-bottom: -7em;
+    margin-right: -2em;
+    max-width: 800px;
+  }
+
+  .portfolio-left, .portfolio .inner.center {
+    text-align: center;
+  }
+
+  .hero {
+    color: white;
+  }
+  .hero h1 {
+    font-size: 3em;
+    max-width: 700px;
+  }
+  .hero h2 {
+    font-size: 1.5em;
+    display: block;
+    max-width: 400px;
+  }
+  .hero .content {
+    text-align: left;
+    align-items: flex-start;
+    padding-right: 7em;
+  }
+  .hero .content > * {
+    padding: 0 0 1rem 0;
+  }
+  .hero .content > h2 {
+    padding: 0 0 3rem 0;
+  }
+  .hero .buttons {
+    flex-direction: row;
+  }
+  .hero .buttons, .hero button {
+    margin: 0 0;
+  }
+  .hero button {
+    padding: 1.2em;
+    font-size: 1em;
+  }
+  .hero .cta {
+    margin: 0;
+  }
+
+  .portfolio-container {
+    padding: 0 0 0 3em;
+  }
+
+  section .portfolio-container {
+    display: grid;
+    place-content: center;
+    padding: 0 3em 0 0;
+  }
+  section .about .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+  }
+  section .about h3 {
+    font-size: 2.5em;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .about {
+    display: grid;
+  }
+  .about .more-text {
+    display: block;
+  }
+  .about a {
+    display: none;
+  }
+  .about .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+  }
+  .about h3 {
+    font-size: 2.5em;
+  }
+
+  .hero .content {
+    background: url("assets/hero-bg.svg") #3F8168;
+    background-size: cover;
+    border-radius: 0 0 5px 5px;
+  }
+
+  .hero-graphic {
+    display: block;
+    margin-left: -1px;
+    overflow: hidden;
+    width: auto;
+    height: 400px;
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 66% auto;
+  }
+
+  section img {
+    margin-right: -10rem;
+  }
+}
+@keyframes full-width-menu {
+  from {
+    grid-template-columns: 66% auto;
+  }
+  to {
+    grid-template-columns: 100%;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .about {
+    border-radius: 5px;
+  }
+
+  section {
+    padding: 4em 0em 4em 2em;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

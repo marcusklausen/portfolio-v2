@@ -7,7 +7,7 @@
     </style>
     <radialGradient id="radial-gradient" cx="0.259" cy="0.317" r="0.901" gradientTransform="matrix(-0.05, 0.999, -0.875, -0.044, 0.549, 0.072)" gradientUnits="objectBoundingBox">
       <stop offset="0" stop-color="#4f9d7f"/>
-      <stop offset="1" stop-color="#3f8168" stop-opacity="0"/>
+      <stop offset="1" stop-color="#3f8168"/>
     </radialGradient>
   </defs>
   <path id="BG_hero" data-name="BG hero" class="cls-1" d="M0,0H1233a0,0,0,0,1,0,0V1077a3,3,0,0,1-3,3H0a0,0,0,0,1,0,0V0A0,0,0,0,1,0,0Z"/>

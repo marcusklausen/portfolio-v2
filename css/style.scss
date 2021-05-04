@@ -6,7 +6,9 @@ $font: 'Poppins', sans-serif;
 * {
     padding:0;
     margin:0;
+    box-sizing: border-box;
 }
+
 
 
 
@@ -29,7 +31,8 @@ a {
     text-decoration: none;
 }
 
-img {
+img, video {
+    max-width:100%;
     width:100%;
 }
 
@@ -37,17 +40,28 @@ img {
     display:none;
 }
 
+.wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+}
 
-header {
-    background-color:darken($green, 5%);
-    color:white;
+header .wrapper div:first-child {
     display:flex;
     justify-content: space-between;
     align-items: center;
-    padding:1em;
+}
+header .left {
+
+    background-color:darken($green, 10%);
+    color:white;
+    padding: 1em 2em;
+
+}
+header {
     position:sticky;
     position: -webkit-sticky;
     top:0;
+    
 
     a {
         color:white;
@@ -71,16 +85,18 @@ header {
     }
 }
 
+.header-br {
+    border-radius: 0 0 5px 5px;
+    overflow:hidden;
+}
+
+.hero-grid {
+    display:block;
+}
 
 .hero {
-    background: $green;
     color:white;
-    display:grid;
-    text-align: center;
-    padding:4em 2em;
-    background-image: url('assets/mobile-about-bg.svg');
-    background-size: cover;
-    background-position:bottom;
+    
 
     h1 {
         font-size: 2.5em;
@@ -88,6 +104,17 @@ header {
 
     h2 {
         display:none;
+    }
+
+    .content {
+        background-image: url('assets/hero-bg-mobile.svg');
+        display:flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 4em 2em;
+
+        background-size: cover;
+        background-position:bottom;
     }
 
     .buttons {
@@ -130,7 +157,7 @@ header {
 }
 
 section {
-    padding:4em 2em;
+    padding:4em 2em 4em 2em;
     text-align: center;
 
     span {
@@ -139,6 +166,7 @@ section {
         color:$green;
         font-weight: bold;
         letter-spacing: 0.2em;
+        padding:0.2em;
     }
 
     h3 {
@@ -151,12 +179,13 @@ section {
         box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
     }
 
-    .left {
+    .portfolio-container {
         padding: 0 0 2em 0 ;
     }
 
     p {
         padding:0.5em 0;
+        max-width: 600px;
     }
 
 }
@@ -166,13 +195,12 @@ section {
 }
 
 .about {
-    background-color: $green;
-    color:white;
-    background-image: url('assets/mobile-about-bg.svg');
-    background-position: top;
+    
+    background:url('assets/hero-bg-mobile.svg');
+    background-repeat: no-repeat;
     background-size: cover;
-    background-repeat:no-repeat;
-    margin-bottom:3em;
+    color:white;
+    
 
     h3 {
         color:white;
@@ -187,8 +215,212 @@ section {
         font-weight: bold;
         text-decoration: underline;
     }
+
+    a {display:none;}
 }
 
 
+@media only screen and (min-width: 600px) {
+    .about {
+
+    text-align:left;
+
+        .more-text {
+            display:block;
+        }
+        .grid {
+            display:grid;
+            grid-template-columns: 1fr 1fr;
+            gap:1em;
+            }
 
 
+        h3 {
+            font-size: 2em;
+        }
+
+    
+    }
+}
+
+
+@media only screen and (min-width: 800px) {
+
+    .featured, .portfolio-container, .about {
+        text-align:left;
+    }
+    .featured, .portfolio {
+        display:grid;
+        grid-template-columns: 3fr 5fr;
+    }
+
+
+    .featured img {
+        margin-bottom:-7em;
+        margin-right:-2em;
+        max-width: 800px;
+    }
+
+
+    .portfolio-left, .portfolio .inner.center {
+        text-align: center;
+    }
+    .hero {
+        color:white;
+        
+    
+        h1 {
+            font-size: 3em;
+
+            max-width: 700px;
+        }
+    
+        h2 {
+            font-size: 1.5em;
+            display:block;
+            max-width:400px;
+        }
+
+        .content {
+            text-align: left;
+            align-items: flex-start;
+            padding-right:7em;
+        }
+
+        .content > * {
+            padding:0 0 1rem 0;
+        }
+
+        .content > h2 {
+
+            padding:0 0 3rem 0;
+        }
+
+
+        .buttons {
+            flex-direction: row;
+        }
+        .buttons, button {
+            margin:0 0;
+        }
+
+        button {
+            padding: 1.2em;
+            font-size:1em;
+        }
+
+        .cta {
+            margin:0;
+        }
+    }
+
+    .portfolio-container {
+        padding: 0 0 0 3em;
+    }
+
+    section {
+
+        .portfolio-container {
+            display:grid;
+            place-content: center;
+            padding: 0 3em 0 0 ;
+        }
+
+        
+
+
+        .about {
+
+            .grid {
+            display:grid;
+            grid-template-columns: 1fr 1fr;
+            gap:2em;
+            }
+
+            h3 {
+                font-size: 2.5em;
+            }
+
+        }
+    }
+
+}
+
+
+@media only screen and (min-width: 1000px) {
+
+
+    .about {
+        display:grid;
+        .more-text {
+            display:block;
+        }
+
+
+        a {display:none;}
+
+        .grid {
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        gap:2em;
+        }
+
+        h3 {
+            font-size:2.5em;
+        }
+
+    }
+
+    .hero {
+        .content {
+            background: url('assets/hero-bg.svg') #3F8168 ;
+            background-size: cover;
+            border-radius: 0 0 5px 5px;
+        }
+    }
+
+    .hero-graphic {
+        display: block;
+        margin-left:-1px;
+        overflow:hidden;
+        width:auto;
+        height:400px;
+        
+    }
+
+    .hero-grid {
+        display:grid;
+        grid-template-columns: 66% auto;
+
+    }
+
+    section {
+        img {
+            margin-right:-10rem;
+        }
+    }
+
+    
+
+}
+
+  @keyframes full-width-menu {
+    from {
+
+        grid-template-columns: 66% auto;
+    }
+    to {
+      grid-template-columns: 100%;
+    }
+  }
+
+@media only screen and (min-width: 1400px) {
+    .about {
+        border-radius: 5px;
+    }
+
+    section {
+
+     padding:4em 0em 4em 2em;
+    }
+}

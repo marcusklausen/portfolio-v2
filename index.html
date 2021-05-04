@@ -11,135 +11,202 @@
 
 <body>
     <header>
-        <span id="logo">Marcus Klausen</span>
-        <nav id="nav">
-            <ul>
-                <li><a href="#">Forside</a></li>
-                <li><a href="#transition2">Portfolio</a></li>
-                <li><a href="https://github.com/marcusklausen">Github</a></li>
-            </ul>
-        </nav>
+        <div class="wrapper hero-grid" id="header">
+            <div class="header left">
+                <span id="logo">Marcus Klausen</span>
+                <nav id="nav">
+                    <ul>
+                        <li><a href="#">Forside</a></li>
+                        <li><a href="#transition2">Portfolio</a></li>
+                        <li><a href="https://github.com/marcusklausen">Github</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
     </header>
 
 
-    <div class="hero">
-        <div class="content">
-            <h1>Frontend elev fyldt med potentiale</h1>
-            <h2>Søger multimedie-integrator elevplads fra august 2021</h2>
-            <div class="buttons">
-                <button class="cta">
-                    <img src="css/assets/mail-icon.svg" alt="">Send mig en mail</button>
-                <button><img src="css/assets/file-icon.svg" alt="">Hent CV</button>
+    <div class="hero" id="hero">
+        <div class="wrapper hero-grid">
+            <div class="content">
+                <h1>Elsker at skabe.<br /> Elsker at kode.</h1>
+                <h2>Søger multimedie-integrator elevplads fra august 2021</h2>
+                <div class="buttons">
+                    <button class="cta">
+                        <img src="css/assets/mail-icon.svg" alt="">Send mig en mail</button>
+                    <button><img src="css/assets/file-icon.svg" alt="">Hent CV</button>
+                </div>
             </div>
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="270" class="hero-graphic" height="503" viewBox="0 0 270 503">
+
+                <defs>
+                    <style>
+                      .cls-1 {
+                        fill: url(#linear-gradient);
+                      }
+                    </style>
+                    <linearGradient id="linear-gradient" x1="0.488" y1="0.084" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+                      <stop offset="0" stop-color="#4c987b"/>
+                      <stop offset="1" stop-color="#3f8168"/>
+                    </linearGradient>
+                  </defs>
+                  <g id="Group_21" data-name="Group 21" transform="translate(-1231 -308.906)">
+                    <g id="Group_3" data-name="Group 3" transform="translate(19 -68.965)">
+                      <g id="Group_2" data-name="Group 2" transform="translate(1213 727.525)">
+                        <path id="Polygon_1" data-name="Polygon 1" class="cls-1" d="M57.228,0l57.228,98.428H0Z" transform="translate(244.966 68.971) rotate(150)"/>
+                        <path id="Path_12" data-name="Path 12" class="cls-1" d="M56.045,0l56.045,96.63H0Z" transform="translate(96.63 41.51) rotate(90)"/>
+                      </g>
+                    </g>
+                    <g id="Group_20" data-name="Group 20" transform="translate(1232 217.9)">
+                      <path id="Polygon_1-2" data-name="Polygon 1" class="cls-1" d="M54.228,0l54.228,93.428H0Z" transform="translate(224.448 218.259) rotate(-158)"/>
+                      <path id="Polygon_2" data-name="Polygon 2" class="cls-1" d="M70.228,0l70.228,121.428H0Z" transform="translate(78.344 209.812) rotate(30)"/>
+                      <path id="Polygon_3" data-name="Polygon 3" class="cls-1" d="M77.228,0l77.228,132.428H0Z" transform="translate(131.428 121.144) rotate(90)"/>
+                      <path id="Polygon_4" data-name="Polygon 4" class="cls-1" d="M42.728,0,85.457,74.428H0Z" transform="matrix(0.454, 0.891, -0.891, 0.454, 231.579, 246.891)"/>
+                    </g>
+                  </g>
+                </svg>
+
         </div>
+    </div>
 
-        <svg xmlns="http://www.w3.org/2000/svg" width="680" class="hero-graphic" height="700" viewBox="0 0 680 700">
-            <g id="Hero_attention" data-name="Hero attention" transform="translate(-930 -171)">
-                <rect id="second-green" width="680" height="100" rx="50" transform="translate(930 371)"
-                    fill="#4c987b" />
-                <rect id="third-green" width="580" height="100" rx="50" transform="translate(930 571)" fill="#4c987b" />
-                <rect id="bottom-green" width="475" height="100" rx="50" transform="translate(939 771)"
-                    fill="#4c987b" />
-                <rect id="first-green" width="573" height="100" rx="50" transform="translate(939 171)" fill="#4c987b" />
-            </g>
-        </svg>
+    <div class="wrapper">
+        <section class="featured">
+            <div class="portfolio-container">
+                <div class="inner transition2">
+                    <span>Fremhævet arbejde</span>
+                    <a href="#">
+                        <h3>Springboard til Humac</h3>
+                    </a>
+                    <p>Blev brugt af værkstedspersonalet og kunne bl.a. holde styr på internt lager, samt oplyse message of the day.</p>
+                </div>
+            </div>
+            
 
+            <img src="img/humac.png" alt="" srcset="">
+
+
+        </section>
     </div>
 
 
-    <section class="featured">
-        <div class="left">
-            <div class="inner transition2">
-                <span>Fremhævet arbejde</span>
-                <a href="#">
-                    <h3>Fire på stribe spil</h3>
-                </a>
-                <p>Her har jeg blandt andet gjort brug af custom classes, structs og getters.</p>
+    <div class="wrapper">
+        <section class="about">
+
+
+
+                <h3>Færdigheder</h3>
+                <div class="grid">
+                    <div>
+                        <p>Jeg er en lærenem ung mand, med stor interesse for alt hvad der hedder computer,
+                            programmering og design.</p>
+
+                        <p>Jeg lavede mit første HTML-dokument i 3. klasse og lige siden har det været min helt store
+                            passion.</p>
+
+                        <p>Lige nu, går jeg på Digital Media (GF2). Derfor søger jeg en elevplads som frontend-udvikler
+                            fra august 2021.
+                        </p>
+                    </div>
+
+                    <a href="#">Læs mere</a>
+
+                    <div class="more-text">
+                        <p>Jeg er fyldt med gode (og knap så gode) idéer og der er ikke langt fra en idé til et nyt
+                            projekt er i
+                            gang.</p>
+
+                        <p>Desuden har jeg arbejdet fem år som Apple-tekniker er og top 20% i verden i Call of Duty:
+                            Warzone. 😎</p>
+                    </div>
+                </div>
+            
+        </section>
+    </div>
+
+        <div class="wrapper">
+
+            <section class="portfolio">
+
+                <div class="portfolio-container">
+                    <div class="inner transition2">
+                        <span>Et personligt projekt</span>
+                        <a href="#">
+                            <h3>Fire på stribe spil</h3>
+                        </a>
+                        <p>Her har jeg blandt andet gjort brug af custom classes, structs og getters.</p>
+                    </div>
+                </div>
+    
+                <img src="img/4-in-a-row.png" alt="" srcset="">
+    
+            </section>
+
+        <section class="portfolio">
+
+            <div class="portfolio-container">
+                
+                <div class="inner transition2" id="transition2">
+                    <span>Gruppe opgave i design</span>
+                    <a href="#">
+                        <h3>Fitness app, Turtle Trainer</h3>
+                    </a>
+                    <p>Målet var at kommunikere, at motion kan være let og sjovt, gennem vores design.</p>
+                </div>
             </div>
-        </div>
-
-        <img src="img/4-in-a-row.png" alt="" srcset="">
-
-    </section>
 
 
-    <section class="about">
-        <h3>Om mig</h3>
-        <p>Jeg er en lærenem ung mand, med stor interesse for alt hvad der hedder computer, programmering og design.</p>
-
-        <p>Jeg lavede mit første HTML-dokument i 3. klasse og lige siden har det været min helt store passion.</p>
-
-        <p>Lige nu, går jeg på Digital Media (GF2). Derfor søger jeg en elevplads som frontend-udvikler fra august 2021.
-        </p>
-
-        <a href="#">Læs mere</a>
-
-        <div class="more-text">
-            <p>Jeg er fyldt med gode (og knap så gode) idéer og der er ikke langt fra en idé til et nyt projekt er i
-                gang.</p>
-
-            <p>Desuden har jeg arbejdet fem år som Apple-tekniker er og top 20% i verden i Call of Duty: Warzone. 😎</p>
-        </div>
-    </section>
-
-    <section>
-        <div class="left">
-            <div class="inner transition2" id="transition2">
-                <span>Gruppe opgave i design</span>
-                <a href="#">
-                    <h3>Fitness app, Turtle Trainer</h3>
-                </a>
-                <p>Målet var at kommunikere, at motion kan være let og sjovt, gennem vores design.</p>
+            <img src="img/turtletrainer.png" alt="" srcset="">
+        </section>
+        <section class="portfolio">
+            <div class="portfolio-container">
+                <div class="inner transition2" id="transition2">
+                    <span>Personligt projekt</span>
+                    <a href="#">
+                        <h3>Redesign af egen portfolio</h3>
+                    </a>
+                    <p>Målet var at kommunikere, at motion kan være let og sjovt, gennem vores design.</p>
+                </div>
             </div>
-        </div>
 
-        <img src="img/turtletrainer.png" alt="" srcset="">
+            <img src="img/portfolio.png" alt="" srcset="">
 
-    </section>
-    <section>
-        <div class="left">
-            <div class="inner transition2" id="transition2">
-                <span>Personligt projekt</span>
-                <a href="#">
-                    <h3>Redesign af egen portfolio</h3>
-                </a>
-                <p>Målet var at kommunikere, at motion kan være let og sjovt, gennem vores design.</p>
+
+        </section>
+        <section class="portfolio">
+            <div class="portfolio-container">
+                <div class="inner transition2">
+                    <span>3D Visualisering</span>
+                    <a href="#">
+                        <h3>3D legomand, lavet i Blender</h3>
+                    </a>
+                    <p>Hard surface modelling i Blender, hvor der blandt andet er gjort brug af rigging til animation.
+                    </p>
+                </div>
             </div>
-        </div>
 
-        <img src="img/portfolio.png" alt="" srcset="">
 
-    </section>
-    <section>
-        <div class="left">
-            <div class="inner transition2">
-                <span>3D Visualisering</span>
-                <a href="#">
-                    <h3>3D legomand, lavet i Blender</h3>
-                </a>
-                <p>Hard surface modelling i Blender, hvor der blandt andet er gjort brug af rigging til animation.</p>
+            <video src="img/lego-dismantled.m4v" autoplay loop muted id="lego-man"></video>
+
+        </section>
+
+        <section class="portfolio">
+            <div class="portfolio-container">
+                <div class="inner transition2" id="transition2">
+                    <span>Digital Media projekt</span>
+                    <a href="#">
+                        <h3>Arnes Portfolio</h3>
+                    </a>
+                    <p>Det første projekt vi lavede i webproduktion, lavet med HTML og CSS. Her lærte jeg at bruge CSS
+                        Grid
+                        og Flexbox.</p>
+                </div>
             </div>
-        </div>
 
-        <img src="img/forportfolio.jpg" alt="" srcset="">
+            <img src="img/arnesportfolio.png" alt="" srcset="">
 
-    </section>
-
-    <section>
-        <div class="left">
-            <div class="inner transition2">
-                <span>Digital Media projekt</span>
-                <a href="#">
-                    <h3>Arnes Portfolio</h3>
-                </a>
-                <p>Det første projekt vi lavede i webproduktion, lavet med HTML og CSS. Her lærte jeg at bruge CSS Grid
-                    og Flexbox.</p>
-            </div>
-        </div>
-
-        <img src="img/arnesportfolio.png" alt="" srcset="">
-
-    </section>
+        </section>
+    </div>
 
     <script src="script.js"></script>
 </body>

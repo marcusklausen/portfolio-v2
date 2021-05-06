@@ -1,5 +1,11 @@
 // Variables
 $green: #4C987B;
+$break-padding-800: 2em;
+$break-padding-1000: 4em;
+$break-padding-1400: 12em;
+$break-padding-1800: 17em;
+$break-padding-2000: 25em;
+
 $font: 'Poppins', sans-serif;
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
 
@@ -54,7 +60,7 @@ header .left {
 
     background-color:darken($green, 10%);
     color:white;
-    padding: 1em 2em;
+    padding: 1em 1em;
     width:100%;
 
 }
@@ -112,8 +118,8 @@ header {
         display:flex;
         flex-direction: column;
         text-align: center;
-        padding: 4em 2em;
-
+        padding: 4em 1em;
+        align-items: center;
         background-size: cover;
         background-position:bottom;
     }
@@ -159,7 +165,7 @@ header {
 
 section {
     margin: 0 auto;
-    padding:4em 2em 4em 2em;
+    padding:4em 1em 4em 1em;
     text-align: center;
 
     span {
@@ -256,16 +262,12 @@ section {
         grid-template-columns: 1fr 1fr;
     }
 
-    .hero-right {
-        display:grid;
-        grid-template-columns: 0 1fr;
-    }
+    
 
 
 
     .featured img {
         margin-bottom:-7em;
-        margin-right:-2em;
         max-width: 800px;
     }
 
@@ -275,7 +277,7 @@ section {
 
     
     header .left {
-        padding: 1em 1em 1em 4em;
+        padding: 1em 1em 1em $break-padding-800;
     }
 
     .portfolio-left, .portfolio .inner.center {
@@ -310,7 +312,7 @@ section {
             border-radius: 0 0 5px 5px;
             height:90vh;
             animation: heroAnimation 1s ease;
-            padding:0 4em;
+            padding:0 $break-padding-800;
             display:flex;
             justify-content: center;
             align-items: flex-start;
@@ -320,11 +322,17 @@ section {
             .scroll-down {
                 width:30px;
                 height:auto;
+
                 animation-name: scrollDown;
                 animation-timing-function: ease;
-                transform-origin: bottom;
                 animation-duration: 2s;
                 animation-iteration-count: infinite;
+
+                -webkit-animation-name: scrollDown;
+                -webkit-animation-timing-function: ease;
+                -webkit-transform-origin: bottom;
+                -webkit-animation-iteration-count: infinite;
+                
             }
 
             .arrow-down-outer {
@@ -336,34 +344,8 @@ section {
            
         }
 
-        .hero-graphic {
-            display: block;
-            margin-left:-2px;
-            width:auto;
-            height:70vh;
-            margin-top: 0px;
-            animation: moveUp 1.2s ease forwards;
-        }
-
 
         
-        .content-inner {
-
-
-            text-align: left;
-            align-items: flex-start;
-            width:50%;
-        }
-
-
-        .content .content-inner > * {
-            padding:0 0 1rem 0;
-        }
-
-        .content .content-inner > h2 {
-
-            padding:0 0 3rem 0;
-        }
 
 
         .buttons {
@@ -383,13 +365,10 @@ section {
         }
     }
 
-    .portfolio-container {
-        padding: 0 0 0 3em;
-    }
 
     section {
         
-        padding: 4em 4em;
+        padding: $break-padding-800;
 
         .portfolio {
             grid-template-columns: 50% auto;
@@ -398,7 +377,7 @@ section {
         .portfolio-container {
             display:grid;
             place-content: center start;
-            padding: 0 3em 0 0 ;
+            padding: 0 $break-padding-800 0 0 ;
         }
 
         h3 {
@@ -434,23 +413,15 @@ section {
 @media only screen and (min-width: 1000px) {
 
 
+    header #logo {
+        font-size: 1.15em;
+    }
     .about {
         display:grid;
-        .more-text {
-            display:block;
-        }
-
-        margin: 0 4em;
+        margin: 0 calc($break-padding-1000 - 2em);
         border-radius: 5px;
 
 
-        a {display:none;}
-
-        .grid {
-        display:grid;
-        grid-template-columns: 1fr 1fr;
-        gap:2em;
-        }
 
         h3 {
             font-size:2.5em;
@@ -458,9 +429,11 @@ section {
 
     }
 
-    .featured img {
-        margin-left:-20px;
+    .portfolio-container {
+        display:grid;
+        place-content: center ;
     }
+
 
     
 
@@ -490,10 +463,13 @@ section {
         display: block;
         margin-left:-2px;
         width:auto;
-        height:50vh;
+        height:65vh;
         margin-top: 0px;
         animation: moveUp 1.2s ease forwards;
     }
+
+
+
 
     .triangle-1 {
         opacity: 0;
@@ -586,50 +562,26 @@ section {
 
 
 @media only screen and (min-width: 1400px) {
+
+
+
     .about {
         border-radius: 5px;
-        margin: 0 7em;
-    }
-
-    section.portfolio, section.featured {
-     padding:4em 7em 4em 7em;
-    }
-
-    section img {
-    max-width: 600px;
-    }
-
-    header .left {
-        padding: 1em 7em;
-    }
-
-    .hero .content {
-        padding: 0 0 0 7em;
-
-        h1 {
-            font-size: 4em;
-        }
-
-        h2 {
-            font-size: 1.7em;
-            max-width: 500px;
-        }
-    }
-
-
-
-}
-
-
-@media only screen and (min-width: 1400px) {
-    .about {
-        border-radius: 5px;
-        margin: 0 12em;
+        margin: 0 calc(#{$break-padding-1400} - 4em);
+        padding: 4em;
     }
 
     section.portfolio, section.featured {
      padding:4em 12em 4em 12em;
     }
+
+    .portfolio-container {
+        justify-content: center;
+        align-items: center;
+    }
+
+
+
 
 
     header .left {
@@ -654,21 +606,22 @@ section {
 @media only screen and (min-width: 1800px) {
     .about {
         border-radius: 5px;
-        margin: 0 25em;
+        margin: 0 calc(#{$break-padding-1800} - 6em);
+        padding: 6em;
 
     }
 
     section.portfolio, section.featured {
-        padding:4em 25em 4em 25em;
+        padding:4em $break-padding-1800 4em $break-padding-1800;
     }
 
 
     header .left {
-        padding: 1em 1em 1em 25em;
+        padding: 1em 1em 1em $break-padding-1800;
     }
 
     .hero .content {
-        padding: 0 0 0 25em;
+        padding: 0 0 0 $break-padding-1800;
     }
 
         
@@ -695,8 +648,15 @@ section {
     }
 }
 @keyframes scrollDown {
-        0%   { transform: translateY(0); }
-        50%  { transform: translateY(0); }
-        70%  { transform: translateY(-20px); ; }
-        100% { transform: translateY(0); }
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(0); }
+    70%  { transform: translateY(-20px); ; }
+    100% { transform: translateY(0); }
+}
+
+@-webkit-keyframes scrollDown  {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(0); }
+    70%  { transform: translateY(-20px); ; }
+    100% { transform: translateY(0); }
 }

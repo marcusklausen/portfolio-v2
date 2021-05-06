@@ -47,7 +47,7 @@ header div:first-child {
 header .left {
   background-color: #3b765f;
   color: white;
-  padding: 1em 2em;
+  padding: 1em 1em;
   width: 100%;
 }
 
@@ -95,7 +95,8 @@ header ul a {
   display: flex;
   flex-direction: column;
   text-align: center;
-  padding: 4em 2em;
+  padding: 4em 1em;
+  align-items: center;
   background-size: cover;
   background-position: bottom;
 }
@@ -135,7 +136,7 @@ header ul a {
 
 section {
   margin: 0 auto;
-  padding: 4em 2em 4em 2em;
+  padding: 4em 1em 4em 1em;
   text-align: center;
 }
 section span {
@@ -213,14 +214,8 @@ section p {
     grid-template-columns: 1fr 1fr;
   }
 
-  .hero-right {
-    display: grid;
-    grid-template-columns: 0 1fr;
-  }
-
   .featured img {
     margin-bottom: -7em;
-    margin-right: -2em;
     max-width: 800px;
   }
 
@@ -229,7 +224,7 @@ section p {
   }
 
   header .left {
-    padding: 1em 1em 1em 4em;
+    padding: 1em 1em 1em 2em;
   }
 
   .portfolio-left, .portfolio .inner.center {
@@ -257,7 +252,7 @@ section p {
     border-radius: 0 0 5px 5px;
     height: 90vh;
     animation: heroAnimation 1s ease;
-    padding: 0 4em;
+    padding: 0 2em;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -269,33 +264,17 @@ section p {
     height: auto;
     animation-name: scrollDown;
     animation-timing-function: ease;
-    transform-origin: bottom;
     animation-duration: 2s;
     animation-iteration-count: infinite;
+    -webkit-animation-name: scrollDown;
+    -webkit-animation-timing-function: ease;
+    -webkit-transform-origin: bottom;
+    -webkit-animation-iteration-count: infinite;
   }
   .hero .content .arrow-down-outer {
     margin: 3em 0 0 5px;
     height: auto;
     overflow: visible;
-  }
-  .hero .hero-graphic {
-    display: block;
-    margin-left: -2px;
-    width: auto;
-    height: 70vh;
-    margin-top: 0px;
-    animation: moveUp 1.2s ease forwards;
-  }
-  .hero .content-inner {
-    text-align: left;
-    align-items: flex-start;
-    width: 50%;
-  }
-  .hero .content .content-inner > * {
-    padding: 0 0 1rem 0;
-  }
-  .hero .content .content-inner > h2 {
-    padding: 0 0 3rem 0;
   }
   .hero .buttons {
     flex-direction: row;
@@ -311,12 +290,8 @@ section p {
     margin: 0;
   }
 
-  .portfolio-container {
-    padding: 0 0 0 3em;
-  }
-
   section {
-    padding: 4em 4em;
+    padding: 2em;
   }
   section .portfolio {
     grid-template-columns: 50% auto;
@@ -324,7 +299,7 @@ section p {
   section .portfolio-container {
     display: grid;
     place-content: center start;
-    padding: 0 3em 0 0;
+    padding: 0 2em 0 0;
   }
   section h3 {
     font-size: 1.7em;
@@ -343,28 +318,22 @@ section p {
   }
 }
 @media only screen and (min-width: 1000px) {
+  header #logo {
+    font-size: 1.15em;
+  }
+
   .about {
     display: grid;
-    margin: 0 4em;
+    margin: 0 calc($break-padding-1000 - 2em);
     border-radius: 5px;
-  }
-  .about .more-text {
-    display: block;
-  }
-  .about a {
-    display: none;
-  }
-  .about .grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2em;
   }
   .about h3 {
     font-size: 2.5em;
   }
 
-  .featured img {
-    margin-left: -20px;
+  .portfolio-container {
+    display: grid;
+    place-content: center;
   }
 
   header .left {
@@ -388,7 +357,7 @@ section p {
     display: block;
     margin-left: -2px;
     width: auto;
-    height: 50vh;
+    height: 65vh;
     margin-top: 0px;
     animation: moveUp 1.2s ease forwards;
   }
@@ -475,40 +444,17 @@ section p {
 @media only screen and (min-width: 1400px) {
   .about {
     border-radius: 5px;
-    margin: 0 7em;
-  }
-
-  section.portfolio, section.featured {
-    padding: 4em 7em 4em 7em;
-  }
-
-  section img {
-    max-width: 600px;
-  }
-
-  header .left {
-    padding: 1em 7em;
-  }
-
-  .hero .content {
-    padding: 0 0 0 7em;
-  }
-  .hero .content h1 {
-    font-size: 4em;
-  }
-  .hero .content h2 {
-    font-size: 1.7em;
-    max-width: 500px;
-  }
-}
-@media only screen and (min-width: 1400px) {
-  .about {
-    border-radius: 5px;
-    margin: 0 12em;
+    margin: 0 calc(12em - 4em);
+    padding: 4em;
   }
 
   section.portfolio, section.featured {
     padding: 4em 12em 4em 12em;
+  }
+
+  .portfolio-container {
+    justify-content: center;
+    align-items: center;
   }
 
   header .left {
@@ -526,19 +472,20 @@ section p {
 @media only screen and (min-width: 1800px) {
   .about {
     border-radius: 5px;
-    margin: 0 25em;
+    margin: 0 calc(17em - 6em);
+    padding: 6em;
   }
 
   section.portfolio, section.featured {
-    padding: 4em 25em 4em 25em;
+    padding: 4em 17em 4em 17em;
   }
 
   header .left {
-    padding: 1em 1em 1em 25em;
+    padding: 1em 1em 1em 17em;
   }
 
   .hero .content {
-    padding: 0 0 0 25em;
+    padding: 0 0 0 17em;
   }
 }
 @keyframes heroAnimation {
@@ -554,6 +501,20 @@ section p {
   }
 }
 @keyframes scrollDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  70% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes scrollDown {
   0% {
     transform: translateY(0);
   }

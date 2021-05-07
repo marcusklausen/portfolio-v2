@@ -4,7 +4,6 @@ let header = document.querySelector("#header");
 let hero = document.querySelector("#hero");
 
 let modalBackdrop = document.querySelector('#modal-backdrop');
-let workItems = document.querySelectorAll('.open-work-item');
 let modalContainer = document.querySelector('#modal-container');
 let closeModalButton;
 
@@ -55,18 +54,23 @@ document.addEventListener("scroll", () => {
 
 
 
+function addEventlistenersToWorkItems() {
 
-workItems.forEach(
-    function(workItem, index){
-        workItem.addEventListener("click", function(e) {
-            e.preventDefault();
-            let workItemId = workItem.getAttribute('href');
-            modalBackdrop.style.display = 'flex';
-            getModalContentFrom(workItemId);
-            disableScroll();
-        })
-    }
-);
+let workItems = document.querySelectorAll('.open-work-item');
+
+    workItems.forEach(
+        function(workItem, index){
+            workItem.addEventListener("click", function(e) {
+                e.preventDefault();
+                let workItemId = workItem.getAttribute('href');
+                modalBackdrop.style.display = 'flex';
+                getModalContentFrom(workItemId);
+                disableScroll();
+            })
+        }
+    );
+}
+
 
 
 function getModalContentFrom(id) {
@@ -76,9 +80,6 @@ function getModalContentFrom(id) {
         // If AJAX response is OK
         if (this.readyState == 4 && this.status == 200) {
             modalContainer.innerHTML = this.responseText;
-
-            // Check if modal height is more than height of viewport
-            checkModalHeight();
 
             closeModalButton = document.querySelector('#close-modal');
             closeModalButton.addEventListener('click', (event) => {
@@ -92,10 +93,35 @@ function getModalContentFrom(id) {
         
     };
 
-    xhttp.open("GET", `article.php?id=${id}`, true);
+    xhttp.open("GET", `get-item.php?id=${id}`, true);
     xhttp.send();
     
 }
+
+function getAllWorkItems() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+
+        let workShowcase = document.querySelector(".work-showcase");
+
+        // If AJAX response is OK
+        if (this.readyState == 4 && this.status == 200) {
+
+            workShowcase.innerHTML = this.responseText;
+            addEventlistenersToWorkItems();
+
+           } else {
+               console.log('rekt');
+           }
+        
+    };
+
+    xhttp.open("GET", `get-all-items.php`, true);
+    xhttp.send();
+    
+}
+
+getAllWorkItems();
 
 modalContainer.addEventListener('click', function(e) {
     e.stopPropagation();
@@ -106,6 +132,12 @@ modalBackdrop.addEventListener('click', function() {
 })
 
 
+
+function closeModal() {
+    modalBackdrop.style.display = 'none';
+    modalContainer.innerHTML = '';
+    enableScroll();
+}
 
 // helper functions
 

@@ -2,11 +2,10 @@
 
 <?php $result = $conn->query($get_single_portfolio_item);?>
 
-<div class="modal-container box-shadox" id="container">
+<div class="modal-container" id="container">
 
-    <main>
 
-        <div class="article spacing">
+
 
         
 
@@ -44,6 +43,12 @@
                         <div class="work-description">
                             <?php echo($row['case_text']);?>
                         </div>
+                        <div class="buttons">
+                    <button class="cta">
+                        <img src="css/assets/mail-icon.svg" alt="">Send mig en mail</button>
+                    <button><img src="css/assets/file-icon.svg" alt="">Hent CV</button>
+
+</div>
 
                     </div>
                     <div class="img-wrapper">
@@ -59,23 +64,6 @@
         </div>
 
 
-        <div class="action">
-            <nav>
-                <ul>
-                <a href="files/Marcus-CV-2021.pdf" class="nav-btn-white-outlined">
-                        <li>Hent CV</li>
-                    </a>
-                    <a href="mailto:hello@marcusklausen.dk" class="filled">
-                        <li>Send mig en email</li>
-                    </a>
-                </ul>
-            </nav>
-        </div>
-
         
-
-
-
-    </main>
 
 <?php } ?>

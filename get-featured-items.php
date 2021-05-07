@@ -31,12 +31,15 @@
         <p><?php echo($row['case_caption']);?></p>
     </div>
             </div>
-            
+        
 
             
 <?php echo($content_to_place); ?>
 
 </section>
+
+
+
 
 
 

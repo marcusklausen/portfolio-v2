@@ -32,7 +32,10 @@
     </div>
 </div>
 
+
+<a href="<?php echo($row['case_id']);?>" class="open-work-item">
 <?php echo($content_to_place); ?>
+</a>
 
 </section>
 

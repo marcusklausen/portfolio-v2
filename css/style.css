@@ -156,7 +156,8 @@ header ul a {
   background-size: cover;
   background-position: bottom;
 }
-.hero .buttons {
+
+.buttons {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -165,7 +166,7 @@ header ul a {
   margin: 2em auto;
   text-align: center;
 }
-.hero .cta {
+.buttons .cta {
   background: white;
   border: 0;
   color: #4C987B;
@@ -173,7 +174,7 @@ header ul a {
   margin-bottom: 1em;
   padding: 1.4em;
 }
-.hero button {
+.buttons button {
   border-radius: 5px;
   background: none;
   padding: 0.7em;
@@ -185,7 +186,7 @@ header ul a {
   align-items: center;
   margin: 0 auto;
 }
-.hero button img {
+.buttons button img {
   margin-right: 0.7em;
   height: calc(1.5em - 2px);
   width: auto;
@@ -245,8 +246,7 @@ section p {
 .about h3 {
   color: white;
   margin-bottom: 1em;
-  text-align: center;
-  display: none;
+  text-align: left;
 }
 .about .more-text {
   display: none;
@@ -266,7 +266,6 @@ section p {
   color: #12251e;
   padding: 2em;
   text-align: left;
-  max-width: 500px;
   margin: 0 auto;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
 }
@@ -274,6 +273,7 @@ section p {
   font-size: 1.5em;
   margin: 0.6em 0;
   text-align: center;
+  font-weight: normal;
 }
 .about .card ul {
   padding-top: 2em;
@@ -283,8 +283,8 @@ section p {
   width: 100%;
 }
 .about .card .icon {
-  height: 90px;
-  width: 80px;
+  height: 70px;
+  width: 60px;
   margin: 10px auto 0 auto;
 }
 
@@ -436,12 +436,66 @@ section p {
     margin: 2em;
     border-radius: 10px;
     padding: 2em;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
   }
   #modal-container .content {
     margin-top: 5em;
     display: grid;
     gap: 4em;
     grid-template-columns: 1fr 2fr;
+  }
+  #modal-container .img-wrapper {
+    position: relative;
+  }
+  #modal-container .img-wrapper img {
+    box-shadow: inset 3px 3px 10px rgba(0, 0, 0, 0.1), inset -3px -3px 10px white;
+  }
+  #modal-container .img-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: inset 3px 3px 10px rgba(0, 0, 0, 0.1), inset -3px -3px 10px white;
+    -moz-box-shadow: inset 3px 3px 10px rgba(0, 0, 0, 0.1), inset -3px -3px 10px white;
+    -webkit-box-shadow: inset 3px 3px 10px rgba(0, 0, 0, 0.2), inset -3px -3px 10px rgba(0, 0, 0, 0.2);
+  }
+  #modal-container .buttons {
+    flex-direction: row;
+    color: #3F8168;
+    justify-content: flex-start;
+    margin: 4em 0 0 0;
+  }
+  #modal-container .buttons button {
+    color: #3F8168;
+    margin: 0 1em 0 0;
+    border-radius: 15px;
+    display: none;
+  }
+  #modal-container .buttons button img {
+    fill: #3F8168;
+  }
+  #modal-container .buttons .cta {
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1), -3px -3px 10px white;
+    transition: box-shadow 0.2s ease-in-out;
+    padding: 1.6em;
+    background-color: unset;
+    font-size: 1em;
+    display: flex;
+  }
+  #modal-container .buttons .cta:hover {
+    box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.1), -7px -7px 15px white;
+  }
+  #modal-container .buttons .cta:active {
+    box-shadow: inset 3px 3px 10px rgba(0, 0, 0, 0.1), inset -3px -3px 10px white;
+  }
+
+  .featured img {
+    margin-bottom: -8em;
+    box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.15);
   }
 
   header .left {
@@ -590,15 +644,22 @@ section p {
     display: grid;
     place-content: center;
     width: 70px;
-    border-radius: 5px;
+    border-radius: 15px;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1), -3px -3px 10px white;
+    transition: box-shadow 0.3s ease-in-out;
   }
   #modal-container .close-modal img {
     width: 60px;
   }
+  #modal-container .close-modal:hover {
+    box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.1), -7px -7px 15px white;
+  }
+  #modal-container .close-modal:active {
+    box-shadow: inset 3px 3px 10px rgba(0, 0, 0, 0.1), inset -3px -3px 10px white;
+  }
   #modal-container .img-wrapper {
     padding: 10px 10px 5px 10px;
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1), -3px -3px 10px white;
     width: 100%;
     height: auto;

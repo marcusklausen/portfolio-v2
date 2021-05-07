@@ -186,17 +186,19 @@ header {
         background-position:bottom;
     }
 
-    .buttons {
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column;
-        max-width: 420px;
-        flex-wrap: wrap;
-        margin: 2em auto;
-        text-align: center;
-      }
-      
-      .cta {
+  
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    max-width: 420px;
+    flex-wrap: wrap;
+    margin: 2em auto;
+    text-align: center;
+
+    .cta {
         background: white;
         border: 0;
         color: #4C987B;
@@ -223,8 +225,7 @@ header {
             width: auto;
           }
       }
-      
-}
+  }
 
 section {
     margin: 0 auto;
@@ -291,8 +292,7 @@ section {
     h3 {
         color:white;
         margin-bottom:1em;
-        text-align: center;
-        display:none;
+        text-align: left;
     }
 
 
@@ -315,7 +315,6 @@ section {
         color:#12251e;
         padding:2em;
         text-align: left;
-        max-width: 500px;
         margin: 0 auto;
 
         box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
@@ -325,6 +324,7 @@ section {
                 font-size: 1.5em;
                 margin: 0.6em 0;
                 text-align: center;
+                font-weight: normal;
             }
 
             ul {
@@ -337,8 +337,8 @@ section {
             }
 
             .icon {
-                height:90px;
-                width:80px;
+                height:70px;
+                width:60px;
                 margin: 10px auto 0 auto;
             }
         
@@ -557,16 +557,91 @@ section {
         border-radius: 10px;
         padding:2em;
 
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+
         .content {
             margin-top:5em;
             display:grid;
             gap:4em;
             grid-template-columns: 1fr 2fr;
         }
+
+        .img-wrapper {
+            position: relative;
+        }
+
+        .img-wrapper img {
+
+            box-shadow: inset 3px 3px 10px rgba(0, 0, 0, 0.1),
+                        inset -3px -3px 10px rgba(255, 255, 255, 1);
+        }
+
+        .img-wrapper::before {
+            content: "";
+            position: absolute;
+            top: 10px;
+            bottom: 10px;
+            left: 10px;
+            right: 10px;
+            border-radius: 5px;
+            overflow:hidden;
+            box-shadow: inset 3px 3px 10px rgba(0, 0, 0, 0.1),
+            inset -3px -3px 10px rgba(255, 255, 255, 1);
+            -moz-box-shadow: inset 3px 3px 10px rgba(0, 0, 0, 0.1),
+            inset -3px -3px 10px rgba(255, 255, 255, 1);
+            -webkit-box-shadow: inset 3px 3px 10px rgba(0, 0, 0, 0.2),
+            inset -3px -3px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .buttons {
+            flex-direction: row;
+            color:#3F8168;
+            justify-content: flex-start;
+            margin: 4em 0 0 0;
+
+            button {
+                color:#3F8168;
+                margin:0 1em 0 0;
+                border-radius: 15px;
+                display:none;
+                
+
+                img {
+                    fill:#3F8168;
+                }
+            }
+
+            .cta {
+                box-shadow:  3px 3px 10px rgba(0, 0, 0, 0.1),
+                         -3px -3px 10px rgba(255, 255, 255, 1);
+                transition: box-shadow 0.2s ease-in-out;
+                padding:1.6em;
+                background-color: unset;
+                font-size: 1em;
+                display:flex;
+            }
+
+            .cta:hover {
+                box-shadow:  7px 7px 15px rgba(0, 0, 0, 0.1),
+                -7px -7px 15px rgba(255, 255, 255, 1);
+            }
+
+            .cta:active {
+
+            box-shadow: inset 3px 3px 10px rgba(0, 0, 0, 0.1),
+            inset -3px -3px 10px rgba(255, 255, 255, 1);
+            }
+        }
+
     }
 
 
-    
+    .featured {
+        img {
+            margin-bottom:-8em;
+            box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.15);
+        }
+    }
 
     header .left {
 
@@ -740,18 +815,30 @@ section {
             display:grid;
             place-content: center;
             width:70px;
-            border-radius: 5px;
+            border-radius: 15px;
             box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1),
-                        -3px -3px 10px rgba(255, 255, 255, 1);;
+                        -3px -3px 10px rgba(255, 255, 255, 1);
 
                         img {
                             width:60px;
                         }
+
+            transition: box-shadow 0.3s ease-in-out;
+        }
+
+        .close-modal:hover {
+            box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.1),
+            -7px -7px 15px rgba(255, 255, 255, 1);
+        }
+
+        .close-modal:active {
+            box-shadow: inset 3px 3px 10px rgba(0, 0, 0, 0.1),
+            inset -3px -3px 10px rgba(255, 255, 255, 1);
         }
 
         .img-wrapper {
                 padding:10px 10px 5px 10px;
-                border-radius: 5px;
+                border-radius: 10px;
                 box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1),
                             -3px -3px 10px rgba(255, 255, 255, 1);
 

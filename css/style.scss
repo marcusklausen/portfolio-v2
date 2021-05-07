@@ -385,7 +385,6 @@ section {
 
 
     .featured img {
-        max-width: 800px;
     }
 
     section img {
@@ -427,7 +426,7 @@ section {
             background: url('assets/hero-bg.svg') #3F8168 ;
             background-size: cover;
             border-radius: 0 0 5px 5px;
-            height:90vh;
+            height:85vh;
             animation: heroAnimation 1s ease;
             padding:0 $break-padding-800;
             display:flex;

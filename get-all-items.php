@@ -3,8 +3,17 @@
 <?php $result = $conn->query($get_all_portfolio_items);?>
         
 
-<?php while($row = $result->fetch_assoc()) { ?>
-
+<?php while($row = $result->fetch_assoc()) { 
+    $img_type = $row['case_img_type'];
+    
+    switch ($img_type) {
+        case "img":
+            $content_to_place = '<img src="img/' . $row['case_img_path'] . '.png" alt="" srcset="">';
+            break;
+        case "video":
+            $content_to_place = '<video src="img/' . $row['case_img_path'] . '.mkv" alt="" srcset="" autoplay muted loop>';
+    }
+    ?>
 
 
 
@@ -20,14 +29,10 @@
             <h3><?php echo($row['case_title']);?></h3>
         </a>
         <p><?php echo($row['case_caption']);?></p>
-        <ul>
-            <li><a href="#">Live site</a></li>
-            <li>Se mere</li>
-        </ul>
     </div>
 </div>
 
-<img src="img/<?php echo($row['case_id']);?>.jpg" alt="" srcset="">
+<?php echo($content_to_place); ?>
 
 </section>
 

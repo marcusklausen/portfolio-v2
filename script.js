@@ -121,7 +121,33 @@ function getAllWorkItems() {
     
 }
 
-getAllWorkItems();
+
+
+function getAllFeaturedItems() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+
+        let featuredShowcase = document.querySelector(".featured-showcase");
+
+        // If AJAX response is OK
+        if (this.readyState == 4 && this.status == 200) {
+
+            featuredShowcase.innerHTML = this.responseText;
+            getAllWorkItems();
+
+           } else {
+               console.log('rekt');
+           }
+        
+    };
+
+    xhttp.open("GET", `get-featured-items.php`, true);
+    xhttp.send();
+    
+}
+
+getAllFeaturedItems();
+
 
 modalContainer.addEventListener('click', function(e) {
     e.stopPropagation();

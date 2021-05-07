@@ -27,6 +27,7 @@ a {
 img, video {
   max-width: 100%;
   width: 100%;
+  border-radius: 5px;
 }
 
 .hero-graphic {
@@ -71,7 +72,7 @@ header .left {
   margin: auto auto;
   width: 100%;
   margin: 5em 0 0 0;
-  background: #f3f3f3;
+  background: #f1f1f1;
   border-radius: 10px 10px 0 0;
   padding: 1em;
   animation: moveUp 0.2s ease-in;
@@ -82,8 +83,12 @@ header .left {
   scrollbar-width: none;
   /* Firefox */
 }
+#modal-container h1 {
+  font-size: 1.6em;
+  padding-right: 1em;
+}
 #modal-container .close-modal img {
-  width: 50px;
+  width: 45px;
   height: auto;
 }
 #modal-container .content {
@@ -440,7 +445,7 @@ section p {
     margin-top: 5em;
     display: grid;
     gap: 4em;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
   }
 
   header .left {
@@ -590,7 +595,7 @@ section p {
     place-content: center;
     width: 70px;
     border-radius: 5px;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1), -5px -5px 10px white;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1), -3px -3px 10px white;
   }
   #modal-container .close-modal img {
     width: 60px;
@@ -598,7 +603,7 @@ section p {
   #modal-container .img-wrapper {
     padding: 10px 10px 5px 10px;
     border-radius: 5px;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1), -5px -5px 10px white;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1), -3px -3px 10px white;
     width: 100%;
     height: auto;
   }

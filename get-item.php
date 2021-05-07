@@ -11,7 +11,18 @@
         
 
 
-        <?php while($row = $result->fetch_assoc()) { ?>
+        <?php while($row = $result->fetch_assoc()) {     
+            
+            $img_type = $row['case_img_type'];
+    
+    switch ($img_type) {
+        case "img":
+            $content_to_place = '<img src="img/' . $row['case_img_path'] . '.png" alt="" srcset="">';
+            break;
+        case "video":
+            $content_to_place = '<video src="img/' . $row['case_img_path'] . '.mkv" alt="" srcset="" autoplay muted loop>';
+    }
+    ?>
             
             <div class="flex-between">
 
@@ -34,13 +45,9 @@
                             <?php echo($row['case_text']);?>
                         </div>
 
-                        <div class="links">
-                            <p><a href="<?php echo($row['case_url_livesite']);?>">Gå til live site &#8594;</a></p>
-                            <p><a href="<?php echo($row['case_url_github']);?>">Se kildekoden på github &#8594;</a></p>
-                        </div>
                     </div>
                     <div class="img-wrapper">
-                        <img src="img/<?php echo($row['case_id']);?>.jpg" alt="" srcset="">
+                        <?php echo($content_to_place); ?>
                     </div>
                 <!--<img src="img/<?php echo($row['case_id']);?>.png" class="full-size" alt="">-->
             

@@ -40,6 +40,7 @@ a {
 img, video {
     max-width:100%;
     width:100%;
+    border-radius: 5px;
 }
 
 .hero-graphic {
@@ -85,7 +86,7 @@ header .left {
     margin: auto auto;
     width:100%;
     margin:5em 0 0 0 ;
-    background:rgb(243, 243, 243);
+    background:rgb(241, 241, 241);
     border-radius: 10px 10px 0 0;
     padding:1em;
     animation: moveUp 0.2s ease-in;
@@ -94,10 +95,17 @@ header .left {
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
 
+    h1 {
+        font-size:1.6em;
+        padding-right:1em;
+    }
+
     .close-modal img {
-            width:50px;
+            width:45px;
             height:auto;
     }
+
+    
 
     .content {
         margin-top:1em;
@@ -554,7 +562,7 @@ section {
             margin-top:5em;
             display:grid;
             gap:4em;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr 2fr;
         }
     }
 
@@ -735,7 +743,7 @@ section {
             width:70px;
             border-radius: 5px;
             box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1),
-                        -5px -5px 10px rgba(255, 255, 255, 1);;
+                        -3px -3px 10px rgba(255, 255, 255, 1);;
 
                         img {
                             width:60px;
@@ -746,7 +754,7 @@ section {
                 padding:10px 10px 5px 10px;
                 border-radius: 5px;
                 box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1),
-                            -5px -5px 10px rgba(255, 255, 255, 1);
+                            -3px -3px 10px rgba(255, 255, 255, 1);
 
                 width:100%;
                 height: auto;

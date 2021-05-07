@@ -3,6 +3,11 @@ let header = document.querySelector("#header");
 
 let hero = document.querySelector("#hero");
 
+let modalBackdrop = document.querySelector('#modal-backdrop');
+let workItems = document.querySelectorAll('.open-work-item');
+let modalContainer = document.querySelector('#modal-container');
+let closeModalButton;
+
 document.addEventListener("scroll", () => {
     
     let heroRect = hero.getBoundingClientRect();
@@ -47,3 +52,75 @@ document.addEventListener("scroll", () => {
 
     
 });
+
+
+
+
+workItems.forEach(
+    function(workItem, index){
+        workItem.addEventListener("click", function(e) {
+            e.preventDefault();
+            let workItemId = workItem.getAttribute('href');
+            modalBackdrop.style.display = 'flex';
+            getModalContentFrom(workItemId);
+            disableScroll();
+        })
+    }
+);
+
+
+function getModalContentFrom(id) {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+
+        // If AJAX response is OK
+        if (this.readyState == 4 && this.status == 200) {
+            modalContainer.innerHTML = this.responseText;
+
+            // Check if modal height is more than height of viewport
+            checkModalHeight();
+
+            closeModalButton = document.querySelector('#close-modal');
+            closeModalButton.addEventListener('click', (event) => {
+            event.preventDefault();
+            closeModal();
+        })
+
+           } else {
+               console.log('rekt');
+           }
+        
+    };
+
+    xhttp.open("GET", `article.php?id=${id}`, true);
+    xhttp.send();
+    
+}
+
+modalContainer.addEventListener('click', function(e) {
+    e.stopPropagation();
+});
+
+modalBackdrop.addEventListener('click', function() {
+    closeModal();
+})
+
+
+
+// helper functions
+
+
+function disableScroll() {
+    // Get the current page scroll position
+    scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+  
+        // if any scroll is attempted, set this to the previous value
+        window.onscroll = function() {
+            window.scrollTo(scrollLeft, scrollTop);
+        };
+}
+  
+function enableScroll() {
+    window.onscroll = function() {};
+}

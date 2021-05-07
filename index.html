@@ -95,7 +95,7 @@
             <div class="portfolio-container">
                 <div class="inner">
                     <span>Fremhævet arbejde</span>
-                    <a href="#">
+                    <a href="#" class="open-work-item">
                         <h3>Springboard til Humac</h3>
                     </a>
                     <p>Blev brugt af værkstedspersonalet og kunne bl.a. holde styr på internt lager, samt oplyse message of the day.</p>
@@ -111,30 +111,52 @@
 
         <section class="about">
 
-                <h3>Færdigheder</h3>
-                <div class="grid">
+                <h3>Profil </h3>
+                <div class="grid-3">
                     <div class="card">
+                        <h4>Om mig</h4>
                         <p>Jeg er en lærenem ung mand, med stor interesse for alt hvad der hedder computer,
                             programmering og design.</p>
 
-                        <p>Jeg lavede mit første HTML-dokument i 3. klasse og lige siden har det været min helt store
-                            passion.</p>
-
-                        <p>Lige nu, går jeg på Digital Media (GF2). Derfor søger jeg en elevplads som frontend-udvikler
+                        <p>Lige nu, går jeg på Digital Media (GF2). Derfor søger jeg en elevplads som full stack udvikler
                             fra august 2021.
                         </p>
+                        <p>Jeg drømmer om en elevplads, hos erfarene udviklere som kan styrke min færdigheder, og hvor jeg får lov til at bidrage med det jeg kan.</p>
                     </div>
 
 
                     <div class="card">
-                        <p>Jeg er fyldt med gode (og knap så gode) idéer og der er ikke langt fra en idé til et nyt
-                            projekt er i
-                            gang.</p>
-
-                        <p>Desuden har jeg arbejdet fem år som Apple-tekniker er og top 20% i verden i Call of Duty:
-                            Warzone. 😎</p>
+                        <h4>Det jeg kan</h4>
+                        <p>Jeg er allerede godt inde i HTML og CSS. JavaScript er jeg hurtigt i gang med at lære. Jeg har arbejdet med følgende:</p>
+                        
+                        <div class="grid-2">
+                            <ul>
+                                <li><b>Sprog</b></li>
+                                <li>HTML & CSS</li>
+                                <li>JavaScript</li>
+                                <li>Sass</li>
+                                <li>PHP</li>
+                                <li>SQL</li>
+                                <li>Swift</li>
+                            </ul>
+                            <ul>
+                                <li><b>Værktøjer</b></li>
+                                <li>Git, Github</li>
+                                <li>PhpMyAdmin</li>
+                                <li>Xcode</li>
+                                <li>Adobe Xd</li>
+                                <li>Adobe Photoshop</li>
+                                <li>Blender</li>
+                                
+                            </ul>
+                        </div>
                     </div>
-                    <div class="card"></div>
+                    <div class="card">
+                        <h4>Det jeg vil</h4>
+                        <p>Min mission, er at blive exceptionelt god til JavaScript og frontend udvikling. </p>
+                        <p>På længere sigt vil jeg gerne lære ting som React Native til mobil apps.</p>
+                        <p>Jeg er indstillet på at gøre det der skal til, og er villig til at investere al den tid et kræver.</p>
+                    </div>
                 </div>
             
         </section>
@@ -145,10 +167,14 @@
                 <div class="portfolio-container">
                     <div class="inner transition2">
                         <span>Et personligt projekt</span>
-                        <a href="#">
+                        <a href="#" class="open-work-item">
                             <h3>Fire på stribe spil</h3>
                         </a>
                         <p>Her har jeg blandt andet gjort brug af custom classes, structs og getters.</p>
+                        <ul>
+                            <li><a href="#">Live site</a></li>
+                            <li>Se mere</li>
+                        </ul>
                     </div>
                 </div>
     
@@ -162,7 +188,7 @@
                 
                 <div class="inner transition2" id="transition2">
                     <span>Gruppe opgave i design</span>
-                    <a href="#">
+                    <a href="#" class="open-work-item">
                         <h3>Fitness app, Turtle Trainer</h3>
                     </a>
                     <p>Målet var at kommunikere, at motion kan være let og sjovt, gennem vores design.</p>
@@ -176,7 +202,7 @@
             <div class="portfolio-container">
                 <div class="inner transition2" id="transition2">
                     <span>Personligt projekt</span>
-                    <a href="#">
+                    <a href="#" class="open-work-item">
                         <h3>Redesign af egen portfolio</h3>
                     </a>
                     <p>Målet var at kommunikere, at motion kan være let og sjovt, gennem vores design.</p>
@@ -191,7 +217,7 @@
             <div class="portfolio-container">
                 <div class="inner transition2">
                     <span>3D Visualisering</span>
-                    <a href="#">
+                    <a href="#" class="open-work-item">
                         <h3>3D legomand, lavet i Blender</h3>
                     </a>
                     <p>Hard surface modelling i Blender, hvor der blandt andet er gjort brug af rigging til animation.
@@ -208,7 +234,7 @@
             <div class="portfolio-container">
                 <div class="inner transition2" id="transition2">
                     <span>Digital Media projekt</span>
-                    <a href="#">
+                    <a href="#" class="open-work-item">
                         <h3>Arnes Portfolio</h3>
                     </a>
                     <p>Det første projekt vi lavede i webproduktion, lavet med HTML og CSS. Her lærte jeg at bruge CSS
@@ -220,6 +246,12 @@
             <img src="img/arnesportfolio.png" alt="" srcset="">
 
         </section>
+
+        <div id="modal-backdrop">
+            <div id="modal-container">
+                
+            </div>
+        </div>
 
     <script src="script.js"></script>
 </body>

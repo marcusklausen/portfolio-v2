@@ -1,0 +1,73 @@
+===============================================================================
+EXTENSION NAME : linecounter
+EXTENSION VERSION : 0.2.7
+-------------------------------------------------------------------------------
+count time : 2021-05-08 19:56:45
+count workspace : /Users/marcusklausen/Sites/portfolio2
+total files : 49
+total code lines : 2205
+total comment lines : 15
+total blank lines : 507
+
+    statistics
+   |      extension|     total code|  total comment|    total blank|percent|
+   -------------------------------------------------------------------------
+   |           .php|            123|              3|             73|    5.6|
+   |               |              1|              0|              0|  0.045|
+   |           .svg|            464|              0|             15|     21|
+   |            .js|            107|              6|             71|    4.9|
+   |           .css|            680|              4|             63|     31|
+   |          .scss|            690|              2|            250|     31|
+   |           .map|              1|              0|              0|  0.045|
+   |          .html|            139|              0|             35|    6.3|
+   -------------------------------------------------------------------------
+.gitignore, code is 1, comment is 0, blank is 0.
+connect.php, code is 19, comment is 3, blank is 9.
+css/assets/5.jpg, it is a binary file.
+css/assets/5@2x.jpg, it is a binary file.
+css/assets/about-me-desktop-bg-2.svg, code is 29, comment is 0, blank is 1.
+css/assets/about-me-desktop-bg.svg, code is 13, comment is 0, blank is 0.
+css/assets/arrow-down.svg, code is 10, comment is 0, blank is 0.
+css/assets/close.svg, code is 6, comment is 0, blank is 0.
+css/assets/code-icon.svg, code is 3, comment is 0, blank is 0.
+css/assets/file-icon.svg, code is 4, comment is 0, blank is 0.
+css/assets/Group 20.svg, code is 26, comment is 0, blank is 1.
+css/assets/Group 21.svg, code is 23, comment is 0, blank is 0.
+css/assets/Group 3.svg, code is 19, comment is 0, blank is 0.
+css/assets/Hero-attention.svg, code is 27, comment is 0, blank is 2.
+css/assets/hero-bg-mobile.svg, code is 14, comment is 0, blank is 0.
+css/assets/hero-bg-right.svg, code is 13, comment is 0, blank is 0.
+css/assets/hero-bg.svg, code is 14, comment is 0, blank is 0.
+css/assets/hero-wrapper-bg.svg, code is 11, comment is 0, blank is 0.
+css/assets/iPhone 12, 12 Pro – 1.svg, code is 42, comment is 0, blank is 3.
+css/assets/mail-icon-white.svg, code is 6, comment is 0, blank is 0.
+css/assets/mail-icon.svg, code is 6, comment is 0, blank is 0.
+css/assets/mobile-about-bg.svg, code is 45, comment is 0, blank is 4.
+css/assets/profile-icon.svg, code is 3, comment is 0, blank is 0.
+css/assets/Rectangle -1.svg, code is 22, comment is 0, blank is 1.
+css/assets/Rectangle -2.svg, code is 22, comment is 0, blank is 1.
+css/assets/Rectangle 38.svg, code is 1, comment is 0, blank is 0.
+css/assets/Rectangle 4.svg, code is 22, comment is 0, blank is 1.
+css/assets/scroll-arrow-icon.svg, code is 7, comment is 0, blank is 0.
+css/assets/scroll-down.svg, code is 1, comment is 0, blank is 0.
+css/assets/Subtraction 2.svg, code is 10, comment is 0, blank is 0.
+css/assets/target-icon.svg, code is 3, comment is 0, blank is 0.
+css/assets/white-triangles.svg, code is 17, comment is 0, blank is 0.
+css/style.css, code is 680, comment is 4, blank is 63.
+css/style.css.map, code is 1, comment is 0, blank is 0.
+css/style.scss, code is 690, comment is 2, blank is 250.
+get-all-items.php, code is 27, comment is 0, blank is 16.
+get-featured-items.php, code is 27, comment is 0, blank is 21.
+get-item.php, code is 50, comment is 0, blank is 27.
+Group 20.svg, code is 26, comment is 0, blank is 1.
+Group 3.svg, code is 19, comment is 0, blank is 0.
+img/arnesportfolio.png, it is a binary file.
+img/four-in-a-row.png, it is a binary file.
+img/lego-dismantled.mkv, it is a binary file.
+img/portfolio-1.png, it is a binary file.
+img/portfolio-2.png, it is a binary file.
+img/springboard.png, it is a binary file.
+img/turtletrainer.png, it is a binary file.
+index.html, code is 139, comment is 0, blank is 35.
+script.js, code is 107, comment is 6, blank is 71.
+===============================================================================

@@ -23,7 +23,7 @@
         }
     ?>
 
-        <div class="flex-between">
+        <div class="flex-between flex-start">
 
             <div>
                 <h1><?php echo ($row['case_title']); ?></h1>
@@ -38,28 +38,28 @@
 
 
         <div class="content">
-            <div>
+            <div class="left">
                 <h2></h2>
                 <div class="work-description">
                     <?php echo ($row['case_text']); ?>
                 </div>
-                <div class="buttons">
-                    <button class="cta">
+                <div class="options">
+                    <a href="mailto:hello@marcusklausen.dk" class="button cta">
                         <img src="css/assets/mail-icon-white.svg" alt="">
                         Kontakt mig
-                    </button>
-                    <button class="neumorph">
+                     </a>
+                    <a href="<?php echo ($row['case_url_livesite']); ?>" target="_blank" class="button">
                         <img src="css/assets/mail-icon.svg" alt="">
                         Live site
-                    </button>
-                    <button class="neumorph">
+                     </a>
+                    <a href="<?php echo ($row['case_url_github']); ?>" target="_blank" class="button">
                         <img src="css/assets/mail-icon.svg" alt="">
                         Github
-                    </button>
+                    </a>
                 </div>
 
             </div>
-            <div class="img-wrapper neumorph">
+            <div class="img-wrapper">
                 <?php echo ($content_to_place); ?>
             </div>
             <!--<img src="img/<?php echo ($row['case_id']); ?>.png" class="full-size" alt="">-->

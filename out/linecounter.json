@@ -1,0 +1,362 @@
+{
+    "extension": "linecounter",
+    "version": "0.2.7",
+    "workspace": "/Users/marcusklausen/Sites/portfolio2",
+    "linecount": [
+        {
+            "version": "0.2.7",
+            "counttime": "2021-05-08 19:56:45",
+            "filesum": 49,
+            "codesum": 2205,
+            "commentsum": 15,
+            "blanksum": 507,
+            "statistics": {
+                ".php": {
+                    "code": 123,
+                    "comment": 3,
+                    "blank": 73
+                },
+                "": {
+                    "code": 1,
+                    "comment": 0,
+                    "blank": 0
+                },
+                ".svg": {
+                    "code": 464,
+                    "comment": 0,
+                    "blank": 15
+                },
+                ".js": {
+                    "code": 107,
+                    "comment": 6,
+                    "blank": 71
+                },
+                ".css": {
+                    "code": 680,
+                    "comment": 4,
+                    "blank": 63
+                },
+                ".scss": {
+                    "code": 690,
+                    "comment": 2,
+                    "blank": 250
+                },
+                ".map": {
+                    "code": 1,
+                    "comment": 0,
+                    "blank": 0
+                },
+                ".html": {
+                    "code": 139,
+                    "comment": 0,
+                    "blank": 35
+                }
+            },
+            "filelist": [
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": ".gitignore"
+                },
+                {
+                    "blank": 9,
+                    "code": 19,
+                    "comment": 3,
+                    "filename": "connect.php"
+                },
+                {
+                    "filename": "css/assets/5.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "css/assets/5@2x.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 1,
+                    "code": 29,
+                    "comment": 0,
+                    "filename": "css/assets/about-me-desktop-bg-2.svg"
+                },
+                {
+                    "blank": 0,
+                    "code": 13,
+                    "comment": 0,
+                    "filename": "css/assets/about-me-desktop-bg.svg"
+                },
+                {
+                    "blank": 0,
+                    "code": 10,
+                    "comment": 0,
+                    "filename": "css/assets/arrow-down.svg"
+                },
+                {
+                    "blank": 0,
+                    "code": 6,
+                    "comment": 0,
+                    "filename": "css/assets/close.svg"
+                },
+                {
+                    "blank": 0,
+                    "code": 3,
+                    "comment": 0,
+                    "filename": "css/assets/code-icon.svg"
+                },
+                {
+                    "blank": 0,
+                    "code": 4,
+                    "comment": 0,
+                    "filename": "css/assets/file-icon.svg"
+                },
+                {
+                    "blank": 1,
+                    "code": 26,
+                    "comment": 0,
+                    "filename": "css/assets/Group 20.svg"
+                },
+                {
+                    "blank": 0,
+                    "code": 23,
+                    "comment": 0,
+                    "filename": "css/assets/Group 21.svg"
+                },
+                {
+                    "blank": 0,
+                    "code": 19,
+                    "comment": 0,
+                    "filename": "css/assets/Group 3.svg"
+                },
+                {
+                    "blank": 2,
+                    "code": 27,
+                    "comment": 0,
+                    "filename": "css/assets/Hero-attention.svg"
+                },
+                {
+                    "blank": 0,
+                    "code": 14,
+                    "comment": 0,
+                    "filename": "css/assets/hero-bg-mobile.svg"
+                },
+                {
+                    "blank": 0,
+                    "code": 13,
+                    "comment": 0,
+                    "filename": "css/assets/hero-bg-right.svg"
+                },
+                {
+                    "blank": 0,
+                    "code": 14,
+                    "comment": 0,
+                    "filename": "css/assets/hero-bg.svg"
+                },
+                {
+                    "blank": 0,
+                    "code": 11,
+                    "comment": 0,
+                    "filename": "css/assets/hero-wrapper-bg.svg"
+                },
+                {
+                    "blank": 3,
+                    "code": 42,
+                    "comment": 0,
+                    "filename": "css/assets/iPhone 12, 12 Pro – 1.svg"
+                },
+                {
+                    "blank": 0,
+                    "code": 6,
+                    "comment": 0,
+                    "filename": "css/assets/mail-icon-white.svg"
+                },
+                {
+                    "blank": 0,
+                    "code": 6,
+                    "comment": 0,
+                    "filename": "css/assets/mail-icon.svg"
+                },
+                {
+                    "blank": 4,
+                    "code": 45,
+                    "comment": 0,
+                    "filename": "css/assets/mobile-about-bg.svg"
+                },
+                {
+                    "blank": 0,
+                    "code": 3,
+                    "comment": 0,
+                    "filename": "css/assets/profile-icon.svg"
+                },
+                {
+                    "blank": 1,
+                    "code": 22,
+                    "comment": 0,
+                    "filename": "css/assets/Rectangle -1.svg"
+                },
+                {
+                    "blank": 1,
+                    "code": 22,
+                    "comment": 0,
+                    "filename": "css/assets/Rectangle -2.svg"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "css/assets/Rectangle 38.svg"
+                },
+                {
+                    "blank": 1,
+                    "code": 22,
+                    "comment": 0,
+                    "filename": "css/assets/Rectangle 4.svg"
+                },
+                {
+                    "blank": 0,
+                    "code": 7,
+                    "comment": 0,
+                    "filename": "css/assets/scroll-arrow-icon.svg"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "css/assets/scroll-down.svg"
+                },
+                {
+                    "blank": 0,
+                    "code": 10,
+                    "comment": 0,
+                    "filename": "css/assets/Subtraction 2.svg"
+                },
+                {
+                    "blank": 0,
+                    "code": 3,
+                    "comment": 0,
+                    "filename": "css/assets/target-icon.svg"
+                },
+                {
+                    "blank": 0,
+                    "code": 17,
+                    "comment": 0,
+                    "filename": "css/assets/white-triangles.svg"
+                },
+                {
+                    "blank": 63,
+                    "code": 680,
+                    "comment": 4,
+                    "filename": "css/style.css"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "css/style.css.map"
+                },
+                {
+                    "blank": 250,
+                    "code": 690,
+                    "comment": 2,
+                    "filename": "css/style.scss"
+                },
+                {
+                    "blank": 16,
+                    "code": 27,
+                    "comment": 0,
+                    "filename": "get-all-items.php"
+                },
+                {
+                    "blank": 21,
+                    "code": 27,
+                    "comment": 0,
+                    "filename": "get-featured-items.php"
+                },
+                {
+                    "blank": 27,
+                    "code": 50,
+                    "comment": 0,
+                    "filename": "get-item.php"
+                },
+                {
+                    "blank": 1,
+                    "code": 26,
+                    "comment": 0,
+                    "filename": "Group 20.svg"
+                },
+                {
+                    "blank": 0,
+                    "code": 19,
+                    "comment": 0,
+                    "filename": "Group 3.svg"
+                },
+                {
+                    "filename": "img/arnesportfolio.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "img/four-in-a-row.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "img/lego-dismantled.mkv",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "img/portfolio-1.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "img/portfolio-2.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "img/springboard.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "img/turtletrainer.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 35,
+                    "code": 139,
+                    "comment": 0,
+                    "filename": "index.html"
+                },
+                {
+                    "blank": 71,
+                    "code": 107,
+                    "comment": 6,
+                    "filename": "script.js"
+                }
+            ]
+        }
+    ]
+}

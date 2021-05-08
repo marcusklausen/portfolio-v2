@@ -36,6 +36,16 @@ document.addEventListener("scroll", () => {
                 header.classList.add('header-br');
             }
 
+            if(document.documentElement.clientWidth >= 2100) {
+                header.setAttribute("style", "width:100%; background-color: #3b765f; padding-right:20em;");
+                header.classList.add('header-br');
+            }
+
+            if(document.documentElement.clientWidth >= 2500) {
+                header.setAttribute("style", "width:100%; background-color: #3b765f; padding-right:35em;");
+                header.classList.add('header-br');
+            }
+
             
 
             

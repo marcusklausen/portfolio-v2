@@ -4,7 +4,8 @@ $break-padding-800: 2em;
 $break-padding-1000: 4em;
 $break-padding-1400: 12em;
 $break-padding-1800: 17em;
-$break-padding-2000: 25em;
+$break-padding-2100: 20em;
+$break-padding-2500: 35em;
 
 $font: 'Poppins', sans-serif;
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
@@ -110,7 +111,7 @@ header .left {
 
         border:1px solid  rgba(255, 255, 255, 0.2);
         box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1),
-                    -3px -3px 10px rgba(255, 255, 255, 0.9);
+                    -3px -3px 10px rgba(255, 255, 255, 0.6);
 
         width:100%;
         height: auto;
@@ -135,7 +136,7 @@ header .left {
             width:60px;
         }
 
-        transition: box-shadow 0.3s ease-in-out;
+        transition: box-shadow 0.1s ease-in-out;
     }
 
     .close-modal:hover {
@@ -179,13 +180,14 @@ header .left {
         .button {
             color:#3F8168;
             border-radius: 5px;
-            transition: box-shadow 0.2s ease-in-out;
+            transition: box-shadow 0.1s ease-in-out;
             padding:1.2em;
             font-size: 0.9em;
             display:flex;
             margin: 0 1em 1em 0;
             box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1),
             -3px -3px 10px rgba(255, 255, 255, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.2);
 
     
 
@@ -203,27 +205,36 @@ header .left {
     
         .button:active {
             box-shadow: inset 3px 3px 10px rgba(0, 0, 0, 0.1),
-            inset -3px -3px 10px rgba(255, 255, 255, 1);
+            inset -3px -3px 10px rgba(255, 255, 255, 0.6);
         }
 
         .cta {
+
+            transition: box-shadow 0.1s ease-in-out;
+            border:none;
             color:white;
             background-color: #3F8168;
-            box-shadow:     3px 3px 15px rgba(0, 0, 0, 0.2),
-                            inset 1px 1px 1px rgba(97,199,160,1),
-                            inset -1px -1px 1px rgb(63,129,104,0.5)
-                            
-                        ;
+            box-shadow:     3px 3px 10px rgba(0, 0, 0, 0.1),
+                            inset 2px 2px 3px rgba(97,199,160,1),
+                            inset -2px -2px 3px rgb(63,129,104,0.5)
+            ;
             background: rgb(63,129,104);
-            background: linear-gradient(156deg, rgba(63,129,104,1) 0%, rgba(88,181,146,1) 100%);
+            background: linear-gradient(156deg, rgba(88,181,146,1) 0%,  rgba(63,129,104,1) 100%);
             
         }
 
         
 
         .cta:active {
-            box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.1),
-            -7px -7px 15px rgba(255, 255, 255, 1);
+            background: rgb(63,129,104);
+            background: linear-gradient(156deg,  rgba(63,129,104,1) 0%, rgba(88,181,146,1) 100%);
+        }
+
+        .cta:hover {
+            box-shadow:     3px 3px 15px rgba(0, 0, 0, 0.2),
+                            inset 2px 2px 3px rgba(97,199,160,1),
+                            inset -2px -2px 3px rgb(63,129,104,0.5)
+            ;
         }
     }
 }
@@ -305,8 +316,9 @@ header {
     flex-wrap: wrap;
     margin: 2em auto;
     text-align: center;
+    align-items: center;
 
-    .cta {
+    .button.cta {
         background: white;
         border: 0;
         color: #4C987B;
@@ -315,9 +327,8 @@ header {
         padding:1.4em;
       }
 
-      button {
+      .button {
         border-radius: 5px;
-        background: none;
         padding: 0.7em;
         color: white;
         border: 0;
@@ -493,6 +504,10 @@ section {
         grid-template-columns: 1fr 1fr;
     }
 
+
+    .hero .buttons .cta {
+        margin: 0 1em 0 0;
+    }
     
     
     section {
@@ -920,6 +935,60 @@ section {
 
     .hero .content {
         padding: 0 0 0 $break-padding-1800;
+    }
+
+        
+
+
+
+}
+@media only screen and (min-width: 2100px) {
+    .about {
+        border-radius: 5px;
+        margin: 0 calc(#{$break-padding-2100} - 6em);
+        padding: 6em;
+
+    }
+
+    section.portfolio, section.featured {
+        padding:4em $break-padding-2100 4em $break-padding-2100;
+    }
+
+
+    header .left {
+        padding: 1em 1em 1em $break-padding-2100;
+    }
+
+    .hero .content {
+        padding: 0 0 0 $break-padding-2100;
+    }
+
+        
+
+
+
+}
+
+
+@media only screen and (min-width: 2500px) {
+    .about {
+        border-radius: 5px;
+        margin: 0 calc(#{$break-padding-2500} - 6em);
+        padding: 6em;
+
+    }
+
+    section.portfolio, section.featured {
+        padding:4em $break-padding-2500 4em $break-padding-2500;
+    }
+
+
+    header .left {
+        padding: 1em 1em 1em $break-padding-2500;
+    }
+
+    .hero .content {
+        padding: 0 0 0 $break-padding-2500;
     }
 
         

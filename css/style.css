@@ -95,7 +95,7 @@ header .left {
   padding: 5px 5px 0px 5px;
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1), -3px -3px 10px rgba(255, 255, 255, 0.9);
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1), -3px -3px 10px rgba(255, 255, 255, 0.6);
   width: 100%;
   height: auto;
 }
@@ -108,7 +108,7 @@ header .left {
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1), -3px -3px 10px rgba(255, 255, 255, 0.6);
   padding: 0.3em;
   border-radius: 15px;
-  transition: box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.1s ease-in-out;
 }
 #modal-container .close-modal img {
   width: 60px;
@@ -145,12 +145,13 @@ header .left {
 #modal-container .options .button {
   color: #3F8168;
   border-radius: 5px;
-  transition: box-shadow 0.2s ease-in-out;
+  transition: box-shadow 0.1s ease-in-out;
   padding: 1.2em;
   font-size: 0.9em;
   display: flex;
   margin: 0 1em 1em 0;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1), -3px -3px 10px rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 #modal-container .options .button img {
   margin-right: 0.7em;
@@ -161,17 +162,23 @@ header .left {
   box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.1), -7px -7px 15px rgba(255, 255, 255, 0.6);
 }
 #modal-container .options .button:active {
-  box-shadow: inset 3px 3px 10px rgba(0, 0, 0, 0.1), inset -3px -3px 10px white;
+  box-shadow: inset 3px 3px 10px rgba(0, 0, 0, 0.1), inset -3px -3px 10px rgba(255, 255, 255, 0.6);
 }
 #modal-container .options .cta {
+  transition: box-shadow 0.1s ease-in-out;
+  border: none;
   color: white;
   background-color: #3F8168;
-  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2), inset 1px 1px 1px #61c7a0, inset -1px -1px 1px rgba(63, 129, 104, 0.5);
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1), inset 2px 2px 3px #61c7a0, inset -2px -2px 3px rgba(63, 129, 104, 0.5);
+  background: #3f8168;
+  background: linear-gradient(156deg, #58b592 0%, #3f8168 100%);
+}
+#modal-container .options .cta:active {
   background: #3f8168;
   background: linear-gradient(156deg, #3f8168 0%, #58b592 100%);
 }
-#modal-container .options .cta:active {
-  box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.1), -7px -7px 15px white;
+#modal-container .options .cta:hover {
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2), inset 2px 2px 3px #61c7a0, inset -2px -2px 3px rgba(63, 129, 104, 0.5);
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -237,8 +244,9 @@ header ul a {
   flex-wrap: wrap;
   margin: 2em auto;
   text-align: center;
+  align-items: center;
 }
-.buttons .cta {
+.buttons .button.cta {
   background: white;
   border: 0;
   color: #4C987B;
@@ -246,9 +254,8 @@ header ul a {
   margin-bottom: 1em;
   padding: 1.4em;
 }
-.buttons button {
+.buttons .button {
   border-radius: 5px;
-  background: none;
   padding: 0.7em;
   color: white;
   border: 0;
@@ -258,7 +265,7 @@ header ul a {
   align-items: center;
   margin: 0 auto;
 }
-.buttons button img {
+.buttons .button img {
   margin-right: 0.7em;
   height: calc(1.5em - 2px);
   width: auto;
@@ -389,6 +396,10 @@ section .inner {
   .featured, .portfolio {
     display: grid;
     grid-template-columns: 1fr 1fr;
+  }
+
+  .hero .buttons .cta {
+    margin: 0 1em 0 0;
   }
 
   section .inner {
@@ -713,6 +724,44 @@ section .inner {
 
   .hero .content {
     padding: 0 0 0 17em;
+  }
+}
+@media only screen and (min-width: 2100px) {
+  .about {
+    border-radius: 5px;
+    margin: 0 calc(20em - 6em);
+    padding: 6em;
+  }
+
+  section.portfolio, section.featured {
+    padding: 4em 20em 4em 20em;
+  }
+
+  header .left {
+    padding: 1em 1em 1em 20em;
+  }
+
+  .hero .content {
+    padding: 0 0 0 20em;
+  }
+}
+@media only screen and (min-width: 2500px) {
+  .about {
+    border-radius: 5px;
+    margin: 0 calc(35em - 6em);
+    padding: 6em;
+  }
+
+  section.portfolio, section.featured {
+    padding: 4em 35em 4em 35em;
+  }
+
+  header .left {
+    padding: 1em 1em 1em 35em;
+  }
+
+  .hero .content {
+    padding: 0 0 0 35em;
   }
 }
 @keyframes heroAnimation {

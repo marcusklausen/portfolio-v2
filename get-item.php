@@ -49,11 +49,11 @@
                         Kontakt mig
                      </a>
                     <a href="<?php echo ($row['case_url_livesite']); ?>" target="_blank" class="button">
-                        <img src="css/assets/mail-icon.svg" alt="">
+                        <img src="css/assets/pc-icon.svg" alt="">
                         Live site
                      </a>
                     <a href="<?php echo ($row['case_url_github']); ?>" target="_blank" class="button">
-                        <img src="css/assets/mail-icon.svg" alt="">
+                        <img src="css/assets/github-icon.svg" alt="">
                         Github
                     </a>
                 </div>

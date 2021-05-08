@@ -86,7 +86,7 @@ header .left {
     margin: auto auto;
     width:100%;
     margin:5em 0 0 0 ;
-    background:rgb(241, 241, 241);
+    background:rgb(230, 230, 230);
     border-radius: 10px 10px 0 0;
     padding:1em;
     animation: moveUp 0.2s ease-in;
@@ -98,6 +98,50 @@ header .left {
     h1 {
         font-size:1.6em;
         padding-right:1em;
+    }
+
+    .img-wrapper {
+        padding:5px 5px 0px 5px;
+        border-radius: 10px;
+
+        border:1px solid  rgba(255, 255, 255, 0.2);
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1),
+                    -3px -3px 10px rgba(255, 255, 255, 0.9);
+
+        width:100%;
+        height: auto;
+
+        img {
+            border-radius: 5px;
+        }
+    }
+
+    .close-modal {
+        display:grid;
+        place-content: center;
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1),
+                    -3px -3px 10px rgba(255, 255, 255, 0.6);
+
+        width:70px;
+        border-radius: 15px;
+
+                   
+
+        img {
+            width:60px;
+        }
+
+        transition: box-shadow 0.3s ease-in-out;
+    }
+
+    .close-modal:hover {
+        box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.1),
+        -7px -7px 15px rgba(255, 255, 255, 0.6);
+    }
+
+    .close-modal:active {
+        box-shadow: inset 3px 3px 10px rgba(0, 0, 0, 0.1),
+        inset -3px -3px 10px rgba(255, 255, 255, 1);
     }
 
     .close-modal img {
@@ -116,6 +160,51 @@ header .left {
     }
     p {
         margin-bottom:2em;
+    }
+
+    .buttons {
+        flex-direction: row;
+        color:#3F8168;
+        justify-content: flex-start;
+        margin: 4em 0 0 0;
+
+        button {
+            color:#3F8168;
+            margin:0 1em 0 0;
+            border-radius: 5px;
+            transition: box-shadow 0.2s ease-in-out;
+            padding:1.2em;
+            font-size: 0.9em;
+            display:flex;
+
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1),
+        -3px -3px 10px rgba(255, 255, 255, 0.6);
+            
+
+            img {
+                fill:#3F8168;
+            }
+        }
+
+        .cta {
+            color:white;
+            background-color: #3F8168;
+            box-shadow:     3px 3px 15px rgba(0, 0, 0, 0.2),
+                            inset 1px 1px 1px rgba(97,199,160,1),
+                            inset -1px -1px 1px rgb(63,129,104,0.5)
+                            
+                        ;
+            background: rgb(63,129,104);
+            background: linear-gradient(156deg, rgba(63,129,104,1) 0%, rgba(88,181,146,1) 100%);
+            
+        }
+
+        
+
+        .cta:active {
+            box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.1),
+            -7px -7px 15px rgba(255, 255, 255, 1);
+        }
     }
 }
 
@@ -191,9 +280,8 @@ header {
 
 .buttons {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-direction: column;
-    max-width: 420px;
     flex-wrap: wrap;
     margin: 2em auto;
     text-align: center;
@@ -563,75 +651,14 @@ section {
             margin-top:5em;
             display:grid;
             gap:4em;
-            grid-template-columns: 1fr 2fr;
+            grid-template-columns: 2fr 3fr;
         }
 
         .img-wrapper {
             position: relative;
         }
 
-        .img-wrapper img {
 
-            box-shadow: inset 3px 3px 10px rgba(0, 0, 0, 0.1),
-                        inset -3px -3px 10px rgba(255, 255, 255, 1);
-        }
-
-        .img-wrapper::before {
-            content: "";
-            position: absolute;
-            top: 10px;
-            bottom: 10px;
-            left: 10px;
-            right: 10px;
-            border-radius: 5px;
-            overflow:hidden;
-            box-shadow: inset 3px 3px 10px rgba(0, 0, 0, 0.1),
-            inset -3px -3px 10px rgba(255, 255, 255, 1);
-            -moz-box-shadow: inset 3px 3px 10px rgba(0, 0, 0, 0.1),
-            inset -3px -3px 10px rgba(255, 255, 255, 1);
-            -webkit-box-shadow: inset 3px 3px 10px rgba(0, 0, 0, 0.2),
-            inset -3px -3px 10px rgba(0, 0, 0, 0.2);
-        }
-        
-        .buttons {
-            flex-direction: row;
-            color:#3F8168;
-            justify-content: flex-start;
-            margin: 4em 0 0 0;
-
-            button {
-                color:#3F8168;
-                margin:0 1em 0 0;
-                border-radius: 15px;
-                display:none;
-                
-
-                img {
-                    fill:#3F8168;
-                }
-            }
-
-            .cta {
-                box-shadow:  3px 3px 10px rgba(0, 0, 0, 0.1),
-                         -3px -3px 10px rgba(255, 255, 255, 1);
-                transition: box-shadow 0.2s ease-in-out;
-                padding:1.6em;
-                background-color: unset;
-                font-size: 1em;
-                display:flex;
-            }
-
-            .cta:hover {
-                box-shadow:  7px 7px 15px rgba(0, 0, 0, 0.1),
-                -7px -7px 15px rgba(255, 255, 255, 1);
-            }
-
-            .cta:active {
-
-            box-shadow: inset 3px 3px 10px rgba(0, 0, 0, 0.1),
-            inset -3px -3px 10px rgba(255, 255, 255, 1);
-            }
-        }
 
     }
 
@@ -811,47 +838,9 @@ section {
     #modal-container {
         padding:3em;
 
-        .close-modal {
-            display:grid;
-            place-content: center;
-            width:70px;
-            border-radius: 15px;
-            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1),
-                        -3px -3px 10px rgba(255, 255, 255, 1);
-
-                        img {
-                            width:60px;
-                        }
-
-            transition: box-shadow 0.3s ease-in-out;
-        }
-
-        .close-modal:hover {
-            box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.1),
-            -7px -7px 15px rgba(255, 255, 255, 1);
-        }
-
-        .close-modal:active {
-            box-shadow: inset 3px 3px 10px rgba(0, 0, 0, 0.1),
-            inset -3px -3px 10px rgba(255, 255, 255, 1);
-        }
-
-        .img-wrapper {
-                padding:10px 10px 5px 10px;
-                border-radius: 10px;
-                box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1),
-                            -3px -3px 10px rgba(255, 255, 255, 1);
-
-                width:100%;
-                height: auto;
-
-            img {
-                border-radius: 5px;
-            }
-        }
 
         .icon img {
-            box-shadow: none;;
+            box-shadow: none;
         }
     }
 

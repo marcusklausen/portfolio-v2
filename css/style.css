@@ -72,7 +72,7 @@ header .left {
   margin: auto auto;
   width: 100%;
   margin: 5em 0 0 0;
-  background: #f1f1f1;
+  background: #e6e6e6;
   border-radius: 10px 10px 0 0;
   padding: 1em;
   animation: moveUp 0.2s ease-in;
@@ -87,6 +87,34 @@ header .left {
   font-size: 1.6em;
   padding-right: 1em;
 }
+#modal-container .img-wrapper {
+  padding: 5px 5px 0px 5px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1), -3px -3px 10px rgba(255, 255, 255, 0.9);
+  width: 100%;
+  height: auto;
+}
+#modal-container .img-wrapper img {
+  border-radius: 5px;
+}
+#modal-container .close-modal {
+  display: grid;
+  place-content: center;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1), -3px -3px 10px rgba(255, 255, 255, 0.6);
+  width: 70px;
+  border-radius: 15px;
+  transition: box-shadow 0.3s ease-in-out;
+}
+#modal-container .close-modal img {
+  width: 60px;
+}
+#modal-container .close-modal:hover {
+  box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.1), -7px -7px 15px rgba(255, 255, 255, 0.6);
+}
+#modal-container .close-modal:active {
+  box-shadow: inset 3px 3px 10px rgba(0, 0, 0, 0.1), inset -3px -3px 10px white;
+}
 #modal-container .close-modal img {
   width: 45px;
   height: auto;
@@ -99,6 +127,35 @@ header .left {
 }
 #modal-container p {
   margin-bottom: 2em;
+}
+#modal-container .buttons {
+  flex-direction: row;
+  color: #3F8168;
+  justify-content: flex-start;
+  margin: 4em 0 0 0;
+}
+#modal-container .buttons button {
+  color: #3F8168;
+  margin: 0 1em 0 0;
+  border-radius: 5px;
+  transition: box-shadow 0.2s ease-in-out;
+  padding: 1.2em;
+  font-size: 0.9em;
+  display: flex;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1), -3px -3px 10px rgba(255, 255, 255, 0.6);
+}
+#modal-container .buttons button img {
+  fill: #3F8168;
+}
+#modal-container .buttons .cta {
+  color: white;
+  background-color: #3F8168;
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2), inset 1px 1px 1px #61c7a0, inset -1px -1px 1px rgba(63, 129, 104, 0.5);
+  background: #3f8168;
+  background: linear-gradient(156deg, #3f8168 0%, #58b592 100%);
+}
+#modal-container .buttons .cta:active {
+  box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.1), -7px -7px 15px white;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -159,9 +216,8 @@ header ul a {
 
 .buttons {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   flex-direction: column;
-  max-width: 420px;
   flex-wrap: wrap;
   margin: 2em auto;
   text-align: center;
@@ -442,55 +498,10 @@ section p {
     margin-top: 5em;
     display: grid;
     gap: 4em;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 2fr 3fr;
   }
   #modal-container .img-wrapper {
     position: relative;
-  }
-  #modal-container .img-wrapper img {
-    box-shadow: inset 3px 3px 10px rgba(0, 0, 0, 0.1), inset -3px -3px 10px white;
-  }
-  #modal-container .img-wrapper::before {
-    content: "";
-    position: absolute;
-    top: 10px;
-    bottom: 10px;
-    left: 10px;
-    right: 10px;
-    border-radius: 5px;
-    overflow: hidden;
-    box-shadow: inset 3px 3px 10px rgba(0, 0, 0, 0.1), inset -3px -3px 10px white;
-    -moz-box-shadow: inset 3px 3px 10px rgba(0, 0, 0, 0.1), inset -3px -3px 10px white;
-    -webkit-box-shadow: inset 3px 3px 10px rgba(0, 0, 0, 0.2), inset -3px -3px 10px rgba(0, 0, 0, 0.2);
-  }
-  #modal-container .buttons {
-    flex-direction: row;
-    color: #3F8168;
-    justify-content: flex-start;
-    margin: 4em 0 0 0;
-  }
-  #modal-container .buttons button {
-    color: #3F8168;
-    margin: 0 1em 0 0;
-    border-radius: 15px;
-    display: none;
-  }
-  #modal-container .buttons button img {
-    fill: #3F8168;
-  }
-  #modal-container .buttons .cta {
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1), -3px -3px 10px white;
-    transition: box-shadow 0.2s ease-in-out;
-    padding: 1.6em;
-    background-color: unset;
-    font-size: 1em;
-    display: flex;
-  }
-  #modal-container .buttons .cta:hover {
-    box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.1), -7px -7px 15px white;
-  }
-  #modal-container .buttons .cta:active {
-    box-shadow: inset 3px 3px 10px rgba(0, 0, 0, 0.1), inset -3px -3px 10px white;
   }
 
   .featured img {
@@ -639,33 +650,6 @@ section p {
 
   #modal-container {
     padding: 3em;
-  }
-  #modal-container .close-modal {
-    display: grid;
-    place-content: center;
-    width: 70px;
-    border-radius: 15px;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1), -3px -3px 10px white;
-    transition: box-shadow 0.3s ease-in-out;
-  }
-  #modal-container .close-modal img {
-    width: 60px;
-  }
-  #modal-container .close-modal:hover {
-    box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.1), -7px -7px 15px white;
-  }
-  #modal-container .close-modal:active {
-    box-shadow: inset 3px 3px 10px rgba(0, 0, 0, 0.1), inset -3px -3px 10px white;
-  }
-  #modal-container .img-wrapper {
-    padding: 10px 10px 5px 10px;
-    border-radius: 10px;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1), -3px -3px 10px white;
-    width: 100%;
-    height: auto;
-  }
-  #modal-container .img-wrapper img {
-    border-radius: 5px;
   }
   #modal-container .icon img {
     box-shadow: none;

@@ -11,7 +11,7 @@
             $content_to_place = '<img src="img/' . $row['case_img_path'] . '.png" alt="" srcset="">';
             break;
         case "video":
-            $content_to_place = '<video src="img/' . $row['case_img_path'] . '.mkv" alt="" srcset="" autoplay muted loop>';
+            $content_to_place = '<video src="img/' . $row['case_img_path'] . '.m4v" alt="" srcset="" autoplay muted loop>';
     }
     ?>
 

@@ -18,11 +18,11 @@ document.addEventListener("scroll", () => {
 
             if(document.documentElement.clientWidth >= 990) {
 
-                header.setAttribute("style", "width:100%; background-color: #3b765f; padding-right:4em;");
+                header.setAttribute("style", "width:100%; background-color: #3b765f; padding-right:2em;");
                 header.classList.add('header-br');
             }
 
-            if(document.documentElement.clientWidth >= 1390) {
+            if(document.documentElement.clientWidth >= 1400) {
                 header.setAttribute("style", "width:100%; background-color: #3b765f; padding-right:12em;");
                 header.classList.add('header-br');
             }
@@ -32,7 +32,7 @@ document.addEventListener("scroll", () => {
             
 
             if(document.documentElement.clientWidth >= 1800) {
-                header.setAttribute("style", "width:100%; background-color: #3b765f; padding-right:15em;");
+                header.setAttribute("style", "width:100%; background-color: #3b765f; padding-right:17em;");
                 header.classList.add('header-br');
             }
 

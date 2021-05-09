@@ -560,7 +560,7 @@ section .inner {
   .hero .content {
     background: url("assets/hero-bg.svg") #3F8168;
     background-size: cover;
-    border-radius: 0 0 5px 5px;
+    border-radius: 0 0 5px 0px;
     width: 66%;
     animation: heroAnimation 1s ease;
     display: flex;

@@ -330,7 +330,7 @@ section .inner {
 .about h3 {
   color: white;
   margin-bottom: 1em;
-  text-align: left;
+  text-align: center;
 }
 .about .more-text {
   display: none;
@@ -386,6 +386,11 @@ section .inner {
   }
   .about h3 {
     font-size: 2em;
+  }
+}
+@media only screen and (min-width: 700px) {
+  .about h3 {
+    text-align: center;
   }
 }
 @media only screen and (min-width: 800px) {
@@ -519,6 +524,7 @@ section .inner {
   }
   .about h3 {
     font-size: 2.5em;
+    text-align: left;
   }
 
   .portfolio-container {

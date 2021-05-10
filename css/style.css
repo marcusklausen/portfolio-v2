@@ -413,8 +413,13 @@ section .inner {
     align-items: flex-start;
   }
 
-  section img {
+  section img, section video {
     float: right;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  section img:hover, section video:hover {
+    transform: scale(1.04);
   }
 
   header .left {

@@ -42,6 +42,7 @@
                 <h2></h2>
                 <div class="work-description">
                     <?php echo ($row['case_text']); ?>
+                    <p><b>Dato:</b> <?php echo ($row['case_date_of_case']); ?></p>
                 </div>
                 <div class="options">
                     <a href="mailto:hello@marcusklausen.dk" class="button cta">

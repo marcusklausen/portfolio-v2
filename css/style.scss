@@ -511,6 +511,8 @@ section {
     }
 
 
+
+
     .hero .buttons .cta {
         margin: 0 1em 0 0;
     }
@@ -522,14 +524,22 @@ section {
             flex-direction: column;
             align-items: flex-start;
         }
+
+
     }
 
 
     .featured img {
     }
 
-    section img {
+    section img, section video {
         float:right;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    section img:hover, section video:hover {
+
+        transform: scale(1.04);
     }
 
     
